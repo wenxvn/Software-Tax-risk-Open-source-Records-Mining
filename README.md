@@ -25,5 +25,4 @@ python scripts/inspect_raw_data.py
 
 ## 当前状态
 
-见 `docs/PROJECT_STATUS.md`。下一步只需提供真实企业授权资料或确定案例企业，不能直接进入案例结论。
-
+见 `docs/PROJECT_STATUS.md` 和 `docs/workflow/STATUS.md`。每次脚本执行的位置、结果和输出都记录在 `docs/workflow/`；使用 `uv run python scripts/workflow.py status` 查看。下一步只需提供真实企业授权资料或确定开源案例边界，不能直接进入案例结论。
