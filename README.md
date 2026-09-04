@@ -8,6 +8,7 @@
 uv sync --extra dev
 uv run pytest
 uv run ruff check .
+uv run python scripts/run_checks.py
 python scripts/inspect_raw_data.py
 ```
 

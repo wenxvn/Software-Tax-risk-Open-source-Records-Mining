@@ -1,5 +1,6 @@
 import re
 from pathlib import Path
+
 from taxrisk.workflow import install_script_logging
 
 ROOT = Path(__file__).resolve().parents[1]

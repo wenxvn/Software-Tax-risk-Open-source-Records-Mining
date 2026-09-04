@@ -1,8 +1,7 @@
 {
-  "current_phase": "PHASE 0",
-  "current_task": "等待公开资料研究和候选案例筛选",
-  "last_run_id": null,
-  "last_status": "NOT_STARTED",
-  "updated_at": null
+  "current_phase": "PHASE 1",
+  "current_task": "开源资料与候选企业筛选",
+  "last_run_id": "run-20260904T133137Z-5184280f",
+  "last_status": "PASSED",
+  "updated_at": "2026-09-04T13:31:37+00:00"
 }
-

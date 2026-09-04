@@ -1,0 +1,7 @@
+candidate_id,company_alias,security_code,exchange,official_disclosure_url,why_candidate,fields_to_verify,selection_status
+SW-001,甲软件企业A,600588,SSE,https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=600588,软件和信息技术服务业公开披露入口稳定,分业务收入合同负债研发费用研发资本化应收账款政府补助关联交易所得税费用,待下载年报核验
+SW-002,甲软件企业B,688111,SSE,https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=688111,科创板软件公司可检索定期报告与XBRL,研发费用无形资产合同负债收入确认员工成本税会差异,待下载年报核验
+SW-003,甲软件企业C,600570,SSE,https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml?COMPANY_CODE=600570,信息服务企业公开公告和年报可作为候选样本,项目收入应收账款研发外包关联交易政府补助所得税费用,待下载年报核验
+SW-004,甲软件企业D,002410,CNINFO,https://www.cninfo.com.cn/,深市软件企业公告入口,项目制收入合同资产研发费用坏账准备关联交易,待用代码检索原始PDF
+SW-005,甲软件企业E,002230,CNINFO,https://www.cninfo.com.cn/,信息技术服务企业公开披露资料较多,收入结构研发投入职工薪酬政府补助关联交易税费,待用代码检索原始PDF
+

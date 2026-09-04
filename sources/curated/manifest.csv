@@ -1,0 +1,19 @@
+relative_path,sha256,collected_date,source,status
+sources/curated/README.md,5f472f2fced41e69875dc6daef636f6de70622febaf0127afff7e9275bc5f74a,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/benchmarks/2024_nankai_case_titles.txt,355b9e083c58705a954106ef81c59d179ca29267a79be6518f2f57134ca5de9a,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/benchmarks/2025_gdufe_awards.txt,c45c454364bf1283091f3807398dc9b74044bb046d2912973a3bd0ebde47bf4f,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/benchmarks/2025_tjufe_award.txt,987a96a0a72c7625fbcf215e5537fed66c10890f1dc1fc4567e95a0ea87a7b78,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/benchmarks/2025_ztbu_summary.txt,5d7b8bc8980b3de44d09b5943c8c0de8ce91cb6ce857516465d7a6fd2ed771fc,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/benchmarks/README.md,dba267bf7f5e4c6378edb835d2c75fbb5915cfa12df276792d935aebd18fd569,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/competition/2026_case_writing_spec.pdf,c87f99a24338dfa43095e23ae3648db1f735dc133eecd679a789a4e3a7e165d4,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/competition/2026_competition_rules.pdf,82ed0761522ff0056267ffd2a1b341adc29c8706531a91f08fcb7d3ae54cdadd,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/competition/key_rules.md,c985668a861057c2961e186e3bd94b8069cfaa5337fa1e0938e2636b0e662561,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/open_data/cninfo_home.html,52b90c9d35674e801d79b94a0b7920b25dcadf2b7fec07d3c92eb443813abfdd,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/open_data/software_company_shortlist.csv,23545e95e25a541e9f68be7d139b21a408f30fb9c3f0f283da3dcb20cb4e32d2,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/open_data/source_catalog.csv,01e75068a0f2bf06346e3a51d8b688033c7aaa42ede5973b82fa5ed5e1ca1612,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/open_data/sse_company_portal_600570.html,98473535497483d1fbc4c04c2dfc8ec8677c856b261b94c16a6737e7788eb7f7,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/open_data/topic_recommendation.md,b9e526def9cd9be809e330d035aca160b81ce3a65e9d17cfc5a9a9628a00eaa1,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/policy_channels/official_portals.md,2cfac23c1fb2d32696879fed21fffed104805cdc9caf2f76331fabba9f1856ce,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/policy_channels/official_portals_original.md,6e2d74326de157c4c017b9835ee2df1bba8365f3239c3584e5f925a96f243ebe,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/templates/campus_competition_checklist.md,9bda36308e1705994e2c213edb44d61d996f99a0568d376d0b9b6a90e2f14a58,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY
+sources/curated/templates/report_template.md,976950815607b7e1b06fcb23677f5601139603289c052cb59b208c5241240b50,2026-09-04,copied from 资料汇总 or downloaded from official URL,REFERENCE_ONLY

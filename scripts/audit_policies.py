@@ -1,6 +1,7 @@
 from pathlib import Path
 
 import pandas as pd
+
 from taxrisk.workflow import install_script_logging
 
 ROOT = Path(__file__).resolve().parents[1]

@@ -1,0 +1,10 @@
+source_id,source_name,official_url,source_type,usable_fields,access_method,trust_boundary,status
+OD-001,巨潮资讯网,https://www.cninfo.com.cn/,上市公司公告/年报,利润表资产负债表现金流量表研发费用合同负债关联交易所得税费用,网页检索后保存原始公告PDF或HTML,公开披露不等于企业账簿或纳税申报,READY
+OD-002,上海证券交易所,https://www.sse.com.cn/assortment/stock/list/info/company/index.shtml,沪市公告与XBRL,公司概况公司公告年报行业分类,按股票代码进入公司信息和公告页,页面提示以对应PDF报告为准,READY
+OD-003,深圳证券交易所,https://www.szse.cn/disclosure/listed/notice/index.html,深市公告与年报,定期报告临时公告监管函,按代码或公司检索并下载PDF,公告为公开线索不替代原始业务凭证,READY
+OD-004,全国股转系统,https://www.neeq.com.cn/disclosure/announcement.html,新三板挂牌公司披露,定期报告公司公告,按挂牌公司检索原文,样本披露深度需逐家核验,READY
+OD-005,国家税务总局,https://www.chinatax.gov.cn/,税收政策,文号发布日期生效期条款适用范围,政策法规栏目检索并归档原文,政策必须核验有效性和案例期间,READY
+OD-006,国家统计局,https://www.stats.gov.cn/,行业统计,行业收入成本利润和分类统计,统计年鉴或数据发布页下载,行业均值不能直接作为企业违法阈值,READY
+OD-007,国家企业信用信息公示系统,https://www.gsxt.gov.cn/,企业公示,登记信息年报经营异常,按统一社会信用代码或名称查询并留存日期,公开登记信息不证明税务事实,READY
+OD-008,中国裁判文书网,https://wenshu.court.gov.cn/,裁判文书,涉税争议事实与法院认定,按案号关键词检索并保存文书,文书公开范围有限且需核对上下文,READY
+

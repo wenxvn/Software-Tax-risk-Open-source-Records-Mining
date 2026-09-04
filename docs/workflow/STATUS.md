@@ -4,8 +4,8 @@
 
 ## 当前状态
 
-- 当前阶段：PHASE 0（环境初始化）
-- 当前任务：等待公开资料研究和候选案例筛选
+- 当前阶段：PHASE 1（开源资料与候选案例筛选）
+- 当前任务：从候选上市公司下载并核验至少两期原始年报/公告
 - 当前门禁：GATE A `IN_PROGRESS`；没有真实企业资料，不得确认真实风险
 
 ## 如何查看
@@ -22,4 +22,3 @@ uv run python scripts/workflow.py gate GATE_A IN_PROGRESS --evidence "sources/cu
 ```
 
 `TASK_LOG.csv` 为每次脚本运行的汇总记录，`EVENTS.jsonl` 为追加式事件记录；失败运行也必须保留。
-

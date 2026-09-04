@@ -1,8 +1,8 @@
 """Persistent, append-only workflow execution records."""
 from __future__ import annotations
 
-import csv
 import atexit
+import csv
 import json
 import sys
 import uuid
@@ -10,7 +10,6 @@ from contextlib import contextmanager
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Iterator
-
 
 LOG_FIELDS = [
     "run_id",

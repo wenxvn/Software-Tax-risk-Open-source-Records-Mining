@@ -1,2 +1,7 @@
 run_id,started_at,finished_at,phase,task,command,status,message,outputs
 
+run-20260904T132843Z-29963bf5,2026-09-04T13:28:43+00:00,2026-09-04T13:28:43+00:00,PHASE 2,inspect_raw_data,python scripts/inspect_raw_data.py,PASSED,,/Users/wenxun/wenxuncoding/税收风险大赛/sources/manifest.csv
+run-20260904T132843Z-115be272,2026-09-04T13:28:43+00:00,2026-09-04T13:28:43+00:00,PHASE 3,build_data_dictionary,python scripts/build_data_dictionary.py,PASSED,,data/dictionaries/data_dictionary.csv
+run-20260904T132942Z-6828c537,2026-09-04T13:29:42+00:00,2026-09-04T13:29:42+00:00,PHASE 1,build_curated_manifest,python scripts/build_curated_manifest.py,PASSED,,sources/curated/manifest.csv
+run-20260904T133136Z-e55677c9,2026-09-04T13:31:36+00:00,2026-09-04T13:31:36+00:00,PHASE 0,project_checks,uv run python scripts/run_checks.py,PASSED,,
+run-20260904T133137Z-5184280f,2026-09-04T13:31:37+00:00,2026-09-04T13:31:37+00:00,PHASE 1,build_curated_manifest,python scripts/build_curated_manifest.py,PASSED,,sources/curated/manifest.csv
