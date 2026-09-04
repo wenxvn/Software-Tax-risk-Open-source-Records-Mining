@@ -1,0 +1,5 @@
+interface:
+  display_name: "Evidence Auditor"
+  short_description: "Evidence-chain completeness audit"
+  default_prompt: "Audit every risk conclusion for traceable, sufficient, and non-conflicting evidence."
+

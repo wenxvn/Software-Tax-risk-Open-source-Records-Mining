@@ -1,0 +1,16 @@
+rule_id: TEMPLATE_001
+name: 示例规则（仅模板）
+tax_type: TODO
+status: TEMPLATE_ONLY
+business_scope: TODO
+inputs: []
+formula: TODO
+threshold:
+  type: TODO
+  value: null
+threshold_basis: TODO
+policy_basis: []
+false_positive_checks: []
+evidence_required: []
+severity_logic: TODO
+

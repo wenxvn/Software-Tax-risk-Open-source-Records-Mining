@@ -1,0 +1,5 @@
+interface:
+  display_name: "Policy Verifier"
+  short_description: "Official-source tax policy verification"
+  default_prompt: "Verify the supplied tax policy records, dates, applicability, and cited articles."
+

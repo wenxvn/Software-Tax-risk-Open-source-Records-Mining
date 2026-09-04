@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tax-risk-case"
+version = "0.1.0"
+description = "Reproducible tax risk case competition analysis infrastructure"
+requires-python = ">=3.11"
+dependencies = [
+  "pandas>=2.2,<3",
+  "openpyxl>=3.1,<4",
+  "duckdb>=1.0,<2",
+  "pyarrow>=16,<22",
+  "pydantic>=2.7,<3",
+  "pandera>=0.20,<1",
+  "pymupdf>=1.24,<2",
+  "pypdf>=4,<7",
+  "networkx>=3.2,<4",
+  "jinja2>=3.1,<4",
+  "pyyaml>=6,<7",
+  "matplotlib>=3.8,<4",
+  "plotly>=5.22,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9", "pytest-cov>=5,<8", "ruff>=0.6,<1"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

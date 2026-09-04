@@ -1,0 +1,5 @@
+interface:
+  display_name: "Tax Risk Auditor"
+  short_description: "Reproducible tax risk scanning"
+  default_prompt: "Run a staged tax risk scan using only the supplied enterprise data and evidence."
+

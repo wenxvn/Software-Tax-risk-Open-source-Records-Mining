@@ -1,0 +1,5 @@
+interface:
+  display_name: "Competition Red Team"
+  short_description: "Adversarial case and defense review"
+  default_prompt: "Red-team this tax-risk case and classify issues by severity with judge questions."
+

@@ -1,0 +1,10 @@
+gate_id,status,updated_at,evidence,reviewer,notes
+GATE_A,IN_PROGRESS,,,"",等待真实企业或合规公开案例资料
+GATE_B,NOT_STARTED,,,,
+GATE_C,NOT_STARTED,,,,
+GATE_D,NOT_STARTED,,,,
+GATE_E,NOT_STARTED,,,,
+GATE_F,NOT_STARTED,,,,
+GATE_G,NOT_STARTED,,,,
+GATE_H,NOT_STARTED,,,,
+
