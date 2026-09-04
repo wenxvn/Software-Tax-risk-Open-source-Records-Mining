@@ -3,8 +3,10 @@ from pathlib import Path
 import pandas as pd
 
 from taxrisk.models import RiskRecord
+from taxrisk.workflow import install_script_logging
 
 ROOT = Path(__file__).resolve().parents[1]
+install_script_logging("run_risk_scan", "python scripts/run_risk_scan.py", "PHASE 8", ROOT, ["outputs/risks/risk_register.csv"])
 recon = ROOT / "outputs/tables/reconciliation.csv"
 if not recon.exists():
     raise SystemExit("run_reconciliation.py first")
@@ -18,4 +20,3 @@ out = ROOT / "outputs/risks/risk_register.csv"
 out.parent.mkdir(parents=True, exist_ok=True)
 pd.DataFrame(rows).to_csv(out, index=False)
 print(f"risk scan written: {out} (synthetic only; no tax conclusion)")
-

@@ -2,7 +2,9 @@
 from __future__ import annotations
 
 import csv
+import atexit
 import json
+import sys
 import uuid
 from contextlib import contextmanager
 from datetime import datetime, timezone
@@ -149,3 +151,34 @@ def run_logged(task: str, command: str, phase: str, root: str | Path = ".") -> I
     else:
         store.finish(tracker, "PASSED", "", tracker.outputs)
 
+
+def install_script_logging(
+    task: str,
+    command: str,
+    phase: str,
+    root: str | Path = ".",
+    outputs: list[str] | None = None,
+) -> RunTracker:
+    """Register a top-level script even when it is not structured as a function."""
+    store = WorkflowStore(root)
+    tracker = store.start(task, command, phase)
+    for output in outputs or []:
+        tracker.add_output(output)
+    finished = False
+
+    def finish(status: str, message: str = "") -> None:
+        nonlocal finished
+        if not finished:
+            finished = True
+            store.finish(tracker, status, message, tracker.outputs)
+
+    def on_exit() -> None:
+        finish("PASSED")
+
+    def on_exception(exc_type: type[BaseException], exc: BaseException, tb: object) -> None:
+        finish("FAILED", f"{exc_type.__name__}: {exc}")
+        sys.__excepthook__(exc_type, exc, tb)
+
+    atexit.register(on_exit)
+    sys.excepthook = on_exception
+    return tracker
