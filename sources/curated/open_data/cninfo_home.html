@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html>
+<!-- 公共头部样式 -->
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="author" content="深圳证券信息有限公司">
+    <meta name="renderer" content="webkit">
+    <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0,maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-title" content="深圳证券信息有限公司">
+    <meta name="keywords" content="巨潮资讯网、巨潮网、巨潮资讯、上市公司公告、巨潮、信息披露、法定披露、披露、创业板、基金、债券、财务数据、网络投票、互动易"/>
+    <meta name="description" content="巨潮资讯网是中国证监会指定的上市公司信息披露网站，平台提供上市公司公告、公司资讯、公司互动、股东大会网络投票等内容功能，一站式服务资本市场投资者。">
+    <title>巨潮资讯网</title>
+    <link rel="shortcut icon" href="//static.cninfo.com.cn/new/img/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="//static.cninfo.com.cn/new/assets/css/common.css?v=20260826101926">
+    <link rel="stylesheet" href="/new/assets/font/iconfont.css?v=20260826101926">
+        <link rel="stylesheet" href="/new/assets/lib/element.css?v=20260826101926">
+    <script>
+        //外部资源路径配置 详情参见properties/http_server_domain.properties
+        var apiServer = "http://api.cninfo.com.cn";//巨潮API域名
+        var cninfo_user_url = "https://uc.cninfo.com.cn";//用户中心
+        var cninfo_user_url_https = "https://owssso.szse.cn/sso";//用户认证中心
+        var path = "/new";//当前系统
+        // var path = "http://test.cninfo.com.cn/new";//当前系统
+        var web_chat = "http://webchat.cninfo.com.cn"
+        var video_url = "//video.cninfo.com.cn"//摇号抽签
+        var cninfo_data20 = "http://www.cninfo.com.cn/data20"; //添加
+        var cninfo_data_url = "http://www.cninfo.com.cn/data";//数据模块
+        var webapi_server_url = "http://www.cninfo.com.cn/api-cloud-server/api";//数据中心测试接口地址
+        var res_cninfo_url = "//static.cninfo.com.cn/new";//CDN域名/new
+
+        var v3_cninfo = "http://static.cninfo.com.cn";//主域名，CDN域名(目前配置的为static.cninfo.com.cn)
+        var webapi_url = "http://webapi.cninfo.com.cn";//数据超市API中心域名
+        var irmApi = "http://irm.cninfo.com.cn";//互动易API域名
+        var pgtype = ""; // 公告页tab类型
+        var officeUrl = "http://view.officeapps.live.com/op/view.aspx?src=";
+        var userConfig_url = "https://www.szse.cn/application/passCenter/pass/"; // 用户设置页面地址
+        var PAGE_TYPE = "index";
+        // var SCORLL_HT = 220;
+        var hq_api_enable = "false";//是否使用行情中心数据, 为false时前端使用行情SDK数据
+		if(window.location.protocol != 'https:'){
+			v3_cninfo=v3_cninfo.replace("https","http");
+		    apiServer=apiServer.replace("https","http");
+			res_cninfo_url=res_cninfo_url.replace("https","http");
+            cninfo_data20=cninfo_data20.replace("https","http");
+            cninfo_data_url=cninfo_data_url.replace("https","http");
+		}else{
+			v3_cninfo=v3_cninfo.replace("http:","https:");
+		    apiServer=apiServer.replace("http:","https:");
+			res_cninfo_url=res_cninfo_url.replace("http:","https:");
+            cninfo_data20=cninfo_data20.replace("http:","https:");
+            cninfo_data_url=cninfo_data_url.replace("http:","https:");
+		}
+    </script>
+    <script src="//static.cninfo.com.cn/new/assets/lib/axios.min.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/lib/vue.min.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/js/vueBus.js?v=20260826101926"></script>
+        <script src="//static.cninfo.com.cn/new/assets/lib/element.js?v=20260826101926"></script>
+
+    <script src="//static.cninfo.com.cn/new/assets/js/sdk/sdkSZSE.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/js/sdk/fingerprint2.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/js/sdk/NWeb.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/js/sdk/GLink_client.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/js/sdk/GUIPC.min_base.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/js/common.js?v=20260826101926"></script>
+    <script defer="defer" src="//static.cninfo.com.cn/new/assets/font/iconfont.js?v=20260826101926"></script>
+    <script src="//static.cninfo.com.cn/new/assets/js/index.js?v=20260826101926"></script>
+
+    <script src="//static.cninfo.com.cn/new/assets/js/sdk/sdkConnect.js?v=20260826101926"></script>
+
+
+
+    <link rel="stylesheet" href="//static.cninfo.com.cn/new/assets/css/home.css?v=20260710082532">
+    <script src="//static.cninfo.com.cn/new/assets/lib/echarts.min.js?v=20260710082532"></script>
+    <style>
+        .right_sec_list_wrap.interview {
+            /* background-image: url("http://localhost:9090/new/assets/image/home_interview_bg.png");*/
+            margin-top: 15px;
+        }
+    </style>
+
+</head>
+<body>
+        <header class="is-fixed jc-shadow-2">
+            <div class="jc-layout-ms clearfix">
+                <div class="logo-wrap">
+                    <a href="/new/index">
+                        <img class="logo" width="100" height="45" src="//static.cninfo.com.cn/new/assets/image/logo.png" alt="">
+                        <img class="slogan" width="150" height="45" src="//static.cninfo.com.cn/new/assets/image/slogan.png" alt="">
+                    </a>
+                </div>
+                <div class="nav-wrap">
+                    <ul class="jc-list">
+                        <li class="f20 p-hover ">
+                            <a class="pointer" href="/new/index">首页</a>
+                        </li>
+                        <li class="f20 p-hover">
+                            <a>公告</a>
+                            <div class="drop-menu jc-shadow-2">
+                                <div class="jc-layout">
+                                    <ul class="jc-list">
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#szse" target="_self">深市</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#szseMain" target="_self">深主板</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#szseGem" target="_self">创业板</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#sse" target="_self">沪市</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#sseMain" target="_self">沪主板</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#sseKcp" target="_self">科创板</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#bj" target="_self">北交所</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#fund" target="_self">基金</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#bond" target="_self">债券</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#hke/1_hkeMain" target="_self">港股</a>
+                                        </li>
+                                        <li>
+
+                                            <a class="p-hover " href="/new/commonUrl?url=disclosure/list/notice#dy%2F1" target="_self">调研</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/commonUrl?url=disclosure/ipo/register" target="_self">发行上市</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/lottery/commonUrl?url=disclosure/lotteryList" target="_self">摇号抽签</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.szse.cn/disclosure/supervision/inquire/index.html" target="_blank">深市问询函</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.sse.com.cn/disclosure/credibility/supervision/inquiries/" target="_blank">沪市问询函</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="https://www.bse.cn/disclosure/enquiry_letter.html" target="_blank">北交所问询函</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.szse.cn/disclosure/supervision/measure/measure/index.html" target="_blank">深市监管措施</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.sse.com.cn/disclosure/credibility/supervision/measures/" target="_blank">沪市监管措施</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="https://www.bse.cn/disclosure/supervise.html" target="_blank">北交所监管措施</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.szse.cn/disclosure/supervision/measure/pushish/index.html" target="_blank">深市纪律处分</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.sse.com.cn/disclosure/credibility/review/" target="_blank">沪市纪律处分</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="https://www.bse.cn/disclosure/disciplinary_aciton.html" target="_blank">北交所纪律处分</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="f20 p-hover">
+                            <a>资讯</a>
+                            <div class="drop-menu jc-shadow-2">
+                                <div class="jc-layout">
+                                    <ul class="jc-list">
+                                        <li>
+                                            <a class="p-hover" href="/new/disclosure/stock?tabName=data&f002v=001001&stockCode=000002&type=info" target="_self">个股F10</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/commonUrl?url=data/public-information" target="_self">公开信息</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/rzrq-zjlx#rzrq" target="_self">融资融券</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/commonUrl?url=data/dzjy" target="_self">大宗交易</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/person-stock-data-tables#xsjj" target="_self">限售解禁</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/snapshot/companyListCn" target="_self">公司要览</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/commonUrl?url=disclosure/tradingTips" target="_self">深市日历</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/person-stock-data-tables#zzts" target="_self">终止/退市</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/commonUrl?url=data/yypl" title="预约披露" target="_self">预约披露</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="/new/commonUrl?url=disclosure/ipo/area" title="IPO查询" target="_self">IPO查询</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/person-stock-data-tables#gqzy" target="_self" title="股权质押">股权质押</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/person-stock-data-tables#gdsj" target="_self">股东数据</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/person-stock-data-tables#gdzjc" target="_self" title="股东增减持">股东增减持</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/person-stock-data-tables#ggcg" target="_self" title="高管持股">高管持股</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover " href="/new/commonUrl?url=data/person-stock-data-tables#jjcg" target="_self" title="基金持股">基金持股</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="f20 p-hover">
+                            <a>数据</a>
+                            <div class="drop-menu jc-shadow-2">
+                                <div class="jc-layout">
+                                    <ul class="jc-list">
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn" target="_blank">数据平台</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/home/data-center" target="_blank">数据商城</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/smartNotice" target="_blank">智能公告</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/listedCompany" target="_blank">上市公司嵌入</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/enDataServices" target="_blank">For Overseas Clients</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/thematicStatistics" target="_blank">专题统计</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/dataBrowse" target="_blank">数据浏览器</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/bond" target="_blank">固定收益</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/fintech" target="_blank">金融科技</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/apiDoc" target="_blank">数据API</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/qiyetupu" target="_blank">企业图谱</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn/#/marketData" target="_blank">行情中心</a>
+                                        </li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="f20 p-hover">
+                            <a>服务</a>
+                            <div class="drop-menu jc-shadow-2">
+                                <div class="jc-layout">
+                                    <ul class="jc-list">
+                                        <li>
+                                            <a class="p-hover" href="http://irm.cninfo.com.cn" target="_blank">互动易</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://wltp.cninfo.com.cn" target="_blank">网络投票</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.cnindex.com.cn/" target="_blank">国证指数</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.szsi.cn/cpfw/fwsq/hq/index.htm" target="_blank">行情授权公示</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://webapi.cninfo.com.cn" target="_blank">深证信数据服务平台</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="https://www.chinahtz.com/index.do" target="_blank">科融通</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="https://www.v-next.cn/index.do" target="_blank">V-Next</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="http://www.szsi.cn/cpfw/fwsq/hq/hlsdkfw.htm" target="_blank">行情服务</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="https://list.cninfo.com.cn" target="_blank">成长通</a>
+                                        </li>
+                                        <li>
+                                            <a class="p-hover" href="https://gkzj.cninfo.com.cn/index" target="_blank">股东权利网络征集</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="handle-wrap">
+                    <span class="nolog">
+                        <a class="login " href="https://owssso.szse.cn/sso/login?locale=zh&service=https://uc.cninfo.com.cn/api/callback?client_name=CasClient">登录</a>
+                        <a href="https://www.szse.cn/application/register/?source=https://uc.cninfo.com.cn/api/callback&locale=zh" class="register">注册</a>
+                    </span>
+                    <span class="logged relative">
+                        <img class="avator-img" src="//static.cninfo.com.cn/new/assets/image/default-avatar.png" width="32" height="32">
+                        <a class="logged-name ell" onclick="gotoUC()"></a>
+                        <a class="logout" onclick="logout()">退出</a>
+                    </span>
+                </div>
+                <div id="noticeTipId" v-cloak @click="readNewsStatus" v-show="display">
+                <el-popover placement="bottom" width="300" v-model="visible">
+                    <div>
+                        <div style="overflow:hidden;padding-bottom:10px;border-bottom: 1px solid #d9d9d9">
+                            <span style="font-weight:600;font-size:16px;float:left;">站内消息</span>
+                            <span class="cursor_pointer" @click="visible=false" style="float:right">x</span>
+                    </div>
+                    <div>
+                        <ul>
+                            <li
+                                    class="cursor_pointer"
+                                    style="padding: 10px 0;border-bottom: 1px solid #eeeeee;overflow:hidden;"
+                            @click="toRouter('/self_gg')"
+                            >
+                            <span style="float:left">最新公告</span>
+                            <span style="float:right">
+                                更新{{newsNew&&newsNew.announce}}条
+                                <span
+                                        style="color:#9098a3"
+                                        class="el-icon-arrow-right"
+                                ></span>
+                            </span>
+                        </li>
+                        <li
+                                class="cursor_pointer"
+                                style="padding: 10px 0;border-bottom: 1px solid #eeeeee;overflow:hidden;"
+                        @click="toRouter('/self_data', '公开信息')"
+                        >
+                        <span style="float:left">公开信息</span>
+                        <span style="float:right">
+                            更新{{newsNew&&newsNew.publicInfo}}条
+                            <span
+                                    style="color:#9098a3"
+                                    class="el-icon-arrow-right"
+                            ></span>
+                        </span>
+                    </li>
+
+                <li
+                        class="cursor_pointer"
+                        style="padding: 10px 0;border-bottom: 1px solid #eeeeee;overflow:hidden;"
+                @click="toRouter('/self_data', '大宗交易')"
+                >
+                <span style="float:left">大宗交易</span>
+                <span style="float:right">
+                    更新{{newsNew&&newsNew.ints}}条
+                    <span
+                            style="color:#9098a3"
+                            class="el-icon-arrow-right"
+                    ></span>
+                </span>
+            </li>
+            <li
+                    class="cursor_pointer"
+                    style="padding: 10px 0;border-bottom: 1px solid #eeeeee;overflow:hidden;"
+            @click="toRouter('/my_wd')"
+            >
+            <span style="float:left">我的问答</span>
+            <span style="float:right">
+                更新{{newsNew&&newsNew.myQuestion}}条
+                <span
+                        style="color:#9098a3"
+                        class="el-icon-arrow-right"
+                ></span>
+            </span>
+            </li>
+            </ul>
+            </div>
+            </div>
+                <el-button type="text" slot="reference">
+                    <span class="el-icon-bell"></span>
+                </el-button>
+            </el-popover>
+                <span class="dot" v-show="newsNew&&!newsNew.read"></span>
+            </div>
+                <div class="search-wrap">
+                    <div class="top-search-1"></div>
+                </div>
+            </div>
+        </header>
+<div class="banner-wrap">
+    <div v-cloak id="bannerBox" class="banner-box">
+        <el-carousel height="340px" indicator-position="none" interval="8000" style="overflow-x: hidden;">
+                    <el-carousel-item>
+                            <a href="https://v.wjx.cn/vm/hZq0RNC.aspx" target="_blank">
+                                <img class="imgbg mainBannerImg" src="/new/index/thumbnail?path=/finalpage/2026-02-24/1224982787.jpg" data-src="http://static.cninfo.com.cn/finalpage/2026-02-24/1224982787.jpg" alt=""/>
+                            </a>
+                    </el-carousel-item>
+                    <el-carousel-item>
+                            <a href="https://www.szse.cn/sustainablefinance/index/index.html" target="_blank">
+                                <img class="imgbg mainBannerImg" src="/new/index/thumbnail?path=/finalpage/2025-09-20/1224672875.png" data-src="http://static.cninfo.com.cn/finalpage/2025-09-20/1224672875.png" alt=""/>
+                            </a>
+                    </el-carousel-item>
+                    <el-carousel-item>
+                            <a href="https://list.cninfo.com.cn/" target="_blank">
+                                <img class="imgbg mainBannerImg" src="/new/index/thumbnail?path=/finalpage/2022-12-08/1215305540.JPG" data-src="http://static.cninfo.com.cn/finalpage/2022-12-08/1215305540.JPG" alt=""/>
+                            </a>
+                    </el-carousel-item>
+                    <el-carousel-item>
+                            <a>
+                                <img class="imgbg mainBannerImg" src="/new/index/thumbnail?path=/finalpage/2020-08-07/1225493807.jpg" data-src="http://static.cninfo.com.cn/finalpage/2020-08-07/1225493807.jpg" alt=""/>
+                            </a>
+                    </el-carousel-item>
+        </el-carousel>
+    </div>
+</div>
+<!-- 快捷导航 -->
+<div class="quick-nav">
+    <div class="jc-layout clearfix">
+        <ul class="jc-list">
+            <li class="links announce sep-line relative">
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#szseMain">深主板</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#sseMain">沪主板</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#bj">北交所</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#fund">基金</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#szseGem">创业板</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#sseKcp">科创板</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#hke/1_hkeMain">港股</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/list/notice#bond">债券</a>
+            </li>
+            <li class="links special relative sep-line">
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/ipo/register">发行上市
+                </a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/ipo/area">IPO查询</a>
+            </li>
+            <li class="links data sep-line relative">
+                <a class="a-dec" href="/new/disclosure/stock?tabName=data&f002v=001001&stockCode=000002&type=info">个股F10</a>
+
+                <a class="a-dec" href="/new/commonUrl?url=data/rzrq-zjlx#rzrq">融资融券</a>
+                <a class="a-dec" href="/new/commonUrl?url=data/dzjy">大宗交易</a>
+                <a class="a-dec" href="/new/commonUrl?url=data/person-stock-data-tables#xsjj">限售解禁</a>
+                <a class="a-dec" href="/new/commonUrl?url=data/public-information">公开信息</a>
+                <a class="a-dec" href="/new/commonUrl?url=disclosure/tradingTips">深市日历</a>
+                <a class="a-dec" href="/new/commonUrl?url=data/yypl" title="预约披露">预约披露</a>
+                <a class="a-dec" href="/new/snapshot/companyListCn" target="_blank">公司要览</a>
+            </li>
+            <li class="links market sep-line relative">
+                <a class="a-dec" href="http://irm.cninfo.com.cn" target="_blank">互动易</a>
+                <a class="a-dec" href="http://wltp.cninfo.com.cn" target="_blank">网络投票</a>
+                <a class="a-dec" href="/new/lottery/commonUrl?url=disclosure/lotteryList">摇号抽签
+                </a>
+                <a class="a-dec" href="http://webapi.cninfo.com.cn/#/home" target="_blank">数据服务</a>
+
+            </li>
+            <li class="my-subs">
+                <a onclick="gotoUC()" >
+                    <img width="25" height="25" src="//static.cninfo.com.cn/new/assets/image/mysubs.png" alt=""/>
+                    <p>我的订阅</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- 行情图 -->
+    <div class="market-pic jc-shadow">
+        <div class="jc-layout-2 clearfix">
+            <div id="indexPic" v-cloak>
+                <div v-if="hq_api_enable === 'true'">
+                    <ul style="height: 140px;" class="jc-list mkt-pic-list">
+                        <li class="f14" v-for="(item,index) in indexList" :class="index < indexList.length-1 ? 'relative sep-line' : '' ">
+                            <div class="detail Akrobat">
+                                <div class="name">{{item.item[0].indexCode == '1A0001' ? '上证指数' : item.item[0].indexName}}</div>
+                                <div class="num" :class="{up: item.item[0].data[0][6] > 0}">{{(item.item[0].data[0][1])}}</div>
+                                <div class="ratio" :class="{up: item.item[0].data[0][6] > 0}">{{item.item[0].data[0][6] > 0 ? '+' : ''}}{{item.item[0].data[0][6]}} ({{item.item[0].data[0][6] > 0 ? '+' : ''}}{{(item.item[0].data[0][7] * 100).toFixed(2)}}%)</div>
+                            </div>
+                            <div class="ec-pic" :id="item.code"></div>
+                        </li>
+                    </ul>
+                </div>
+                <div v-else>
+                    <ul style="height: 140px;" v-if="myBrowser() != 'IE'" class="jc-list mkt-pic-list">
+                        <li class="f14" v-for="(item,index) in indexList" :class="index < indexList.length-1 ? 'relative sep-line' : '' ">
+                            <div class="detail Akrobat">
+                                <div class="name">{{item.stockName}}</div>
+                                <div class="num" :class="{up: item.change > 0}">{{(item.last)}}</div>
+                                <div class="ratio" :class="{up: item.change > 0}">{{item.change > 0 ? '+' : ''}}{{item.change?item.change:'-'}}  {{ item.percentChange? ( (item.change > 0 ? '(+' : '(') +item.percentChange + '%)' ) : '-' }}</div>
+                            </div>
+                            <div class="ec-pic" :id="item.code"></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 公告概览  -->
+<div class="announce-view jc-shadow">
+    <div class="jc-layout clearfix">
+        <div class="jc-layout-lt ">
+            <div class="ov-hide notice-tab">
+                <ul class="tabs-list tabs-list-1">
+                    <li class="active">
+                        <a data-list="quick" href="javascript:;">
+                            最新公告
+                        </a>
+                    </li>
+                    <a class="more1" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search">
+                        更多
+                        <svg class="icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#icongengduozhengti"></use>
+                        </svg>
+                    </a>
+                </ul>
+                <div class="tabs-container">
+                    <div class="tab-content" style="display: block;">
+                        <div class="notice-condition-tab">
+                            <ul class="tabs-list tabs-list-3">
+                                            <li class="t-tag">
+                                                <a href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&checkedCategory=category_zj_szsh">
+                                                    中介报告
+                                                </a>
+                                            </li>
+                                            <li class="t-tag">
+                                                <a href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&checkedCategory=category_dshgg_szsh">
+                                                    董事会
+                                                </a>
+                                            </li>
+                                            <li class="t-tag">
+                                                <a href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&checkedCategory=category_gddh_szsh">
+                                                    股东会
+                                                </a>
+                                            </li>
+                                            <li class="t-tag">
+                                                <a href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&checkedCategory=category_rcjy_szsh">
+                                                    日常经营
+                                                </a>
+                                            </li>
+                                            <li class="t-tag">
+                                                <a href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&checkedCategory=category_gqbd_szsh">
+                                                    股权变动
+                                                </a>
+                                            </li>
+                                            <li class="t-tag">
+                                                <a href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&checkedCategory=category_kzzq_szsh">
+                                                    可转债
+                                                </a>
+                                            </li>
+                            </ul>
+                        </div>
+                        <table class="table jc-table jc-table3">
+                            <colgroup>
+                                <col width="100">
+                                <col width="180">
+                                <col width="440">
+                                <col width="80">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>简称</th>
+                                <th>公告标题</th>
+                                <th class="txt-c">日期</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002281&orgId=9900007888">
+                                                            <span>002281</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002281&orgId=9900007888">
+                                                                <span title="光迅科技">
+                                                                    光迅科技
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="武汉光迅科技股份有限公司关于拟续聘2026年度审计机构的公告">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=002281&orgId=9900007888&announcementId=1225550112&announcementTime=2026-09-05">
+                                                            武汉光迅科技股份有限公司关于拟续聘2026年度审计机构的公告
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=002281&name=光迅科技&orgId=9900007888&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002605&orgId=9900021171">
+                                                            <span>002605</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002605&orgId=9900021171">
+                                                                <span title="姚记科技">
+                                                                    姚记科技
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="关于调整回购股份价格上限的公告">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=002605&orgId=9900021171&announcementId=1225550083&announcementTime=2026-09-05">
+                                                            关于调整回购股份价格上限的公告
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=002605&name=姚记科技&orgId=9900021171&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=688981&orgId=gshk0000981">
+                                                            <span>688981</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=688981&orgId=gshk0000981">
+                                                                <span title="中芯国际">
+                                                                    中芯国际
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="港股公告：证券变动月报表">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=688981&orgId=gshk0000981&announcementId=1225550079&announcementTime=2026-09-05">
+                                                            港股公告：证券变动月报表
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=688981&name=中芯国际&orgId=gshk0000981&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002717&orgId=9900023171">
+                                                            <span>002717</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002717&orgId=9900023171">
+                                                                <span title="*ST岭南">
+                                                                    *ST岭南
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="关于收到濉溪县城市管理行政执法局立案通知书的公告">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=002717&orgId=9900023171&announcementId=1225550059&announcementTime=2026-09-05">
+                                                            关于收到濉溪县城市管理行政执法局立案通知书的公告
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=002717&name=*ST岭南&orgId=9900023171&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=688584&orgId=nssc1000610">
+                                                            <span>688584</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=688584&orgId=nssc1000610">
+                                                                <span title="上海合晶">
+                                                                    上海合晶
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="上海合晶召开2026年第一次临时股东会的通知">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=688584&orgId=nssc1000610&announcementId=1225550022&announcementTime=2026-09-05">
+                                                            上海合晶召开2026年第一次临时股东会的通知
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=688584&name=上海合晶&orgId=nssc1000610&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=300341&orgId=9900022266">
+                                                            <span>300341</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=300341&orgId=9900022266">
+                                                                <span title="麦克奥迪">
+                                                                    麦克奥迪
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="独立董事候选人声明与承诺（池骋）">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=300341&orgId=9900022266&announcementId=1225550003&announcementTime=2026-09-05">
+                                                            独立董事候选人声明与承诺（池骋）
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=300341&name=麦克奥迪&orgId=9900022266&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=601336&orgId=GD040482">
+                                                            <span>601336</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=601336&orgId=GD040482">
+                                                                <span title="新华保险">
+                                                                    新华保险
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="新华保险H股公告">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=601336&orgId=GD040482&announcementId=1225549968&announcementTime=2026-09-05">
+                                                            新华保险H股公告
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=601336&name=新华保险&orgId=GD040482&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=300177&orgId=9900016529">
+                                                            <span>300177</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=300177&orgId=9900016529">
+                                                                <span title="中海达">
+                                                                    中海达
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="关于公司及相关人员收到深圳证券交易所监管函的公告">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=300177&orgId=9900016529&announcementId=1225549967&announcementTime=2026-09-05">
+                                                            关于公司及相关人员收到深圳证券交易所监管函的公告
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=300177&name=中海达&orgId=9900016529&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=300621&orgId=9900031435">
+                                                            <span>300621</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=300621&orgId=9900031435">
+                                                                <span title="维业股份">
+                                                                    维业股份
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="关于累计诉讼、仲裁情况的公告">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=300621&orgId=9900031435&announcementId=1225549962&announcementTime=2026-09-05">
+                                                            关于累计诉讼、仲裁情况的公告
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=300621&name=维业股份&orgId=9900031435&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002867&orgId=9900029978">
+                                                            <span>002867</span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a target="_blank" href="/new/disclosure/stock?stockCode=002867&orgId=9900029978">
+                                                                <span title="周大生">
+                                                                    周大生
+                                                                </span>
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                    <span class="ell" title="关于公司部分董事减持计划期限届满暨实施情况的公告">
+                                                        <a target="_blank" href="/new/disclosure/detail?stockCode=002867&orgId=9900029978&announcementId=1225549961&announcementTime=2026-09-05">
+                                                            关于公司部分董事减持计划期限届满暨实施情况的公告
+                                                        </a>
+                                                    </span>
+                                                    </td>
+                                                    <td class="txt-c">
+                                                        <span class="ell">
+                                                            <a onclick="tdClickPosition('首页点击位置', '公告速递', '今日标签');" href="/new/commonUrl/pageOfSearch?url=disclosure/list/search&code=002867&name=周大生&orgId=9900029978&startDate=2026-09-05&endDate=2026-09-05">
+                                                            09-05
+                                                            </a>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jc-layout-rt">
+            <div class="jc-layout-gz">
+                <div class="search-tab-box">
+                    <div class="search-tab" v-cloak id="searchTab">
+                        <div class="tab-ct">
+                            <div class="hd hdd-bod">
+                                <img src="//static.cninfo.com.cn/new/assets/image/announceQS.png" alt="">
+                            </div>
+                            <div class="ct-line">
+                                <el-row :gutter="10">
+                                    <el-col :span="12">
+                                        <el-autocomplete
+                                                size="medium"
+                                                ref="searchTabInput"
+                                                class="el-word-input"
+                                                popper-class="word-input"
+                                                maxlength="30"
+                                                placeholder="代码/简称/拼音"
+                                                v-model.trim="stock"
+                                                :trigger-on-focus="true"
+                                                :fetch-suggestions="querySearch"
+                                                :debounce="300"
+                                                @blur="wordInputBlur"
+                                                @keyup.enter.native="enterQuery"
+                                                @select="handleSelect">
+                                            <template slot-scope="item">
+                                                <el-row :gutter="24">
+                                                    <el-col :span="6">
+                                                        <span class="code ell" :title="item.item.code">{{item.item.code ? item.item.code : '-'}}</span>
+                                                    </el-col>
+                                                    <el-col :span="6">
+                                                        <span class="type ell" :title="item.item.category">{{item.item.category ? item.item.category : '-'}}</span>
+                                                    </el-col>
+                                                    <el-col :span="12">
+                                                        <span class="name" :title="item.item.zwjc">{{item.item.zwjc ? (item.item.zwjc.length>8?item.item.zwjc.slice(0,8)+'...':item.item.zwjc) : '-'}}</span>
+                                                    </el-col>
+                                                </el-row>
+                                            </template>
+                                        </el-autocomplete>
+                                    </el-col>
+
+                                    <el-col :span="12">
+                                        <el-popover ref="sPopVisible" popper-class="s-pop" placement="bottom-start" :width="categoryMap[actTabName]['width']" trigger="click">
+                                            <div class="hd">
+                                                <el-button type="text" size="mini" @click="closePop"><i class="el-icon-close"></i></el-button>
+                                            </div>
+                                            <div class="bd">
+                                                <el-checkbox-group v-model="checkedPlate">
+                                                    <el-checkbox v-for="(item,index) in categoryMap[actTabName]['plate']" :label="item" :key="item.key"><span class="cate-checkbox-txt" :title="item.value">{{item.value}}</span>
+                                                    </el-checkbox>
+                                                </el-checkbox-group>
+                                            </div>
+                                            <el-button class="checkbox-btn" slot="reference" size="medium" @click="sPopVisible = !sPopVisible">{{categoryStr}} {{checkNum}}<i class="el-icon-caret-bottom el-icon--right"></i></el-button>
+                                        </el-popover>
+                                    </el-col>
+                                </el-row>
+                            </div>
+                            <div class="">
+                                <el-date-picker
+                                        size="medium"
+                                        class="sr-handle"
+                                        v-model="date"
+                                        type="daterange"
+                                        align="left"
+                                        unlink-panels
+                                        value-format="yyyy-MM-dd"
+                                        :picker-options="pickerOption"
+                                        range-separator="至"
+                                        start-placeholder="开始日期"
+                                        end-placeholder="结束日期">
+                                </el-date-picker>
+                            </div>
+                            <div>
+                                <el-button size="medium" class="sr-handle sr-but" type="primary" @click="goSearch"> 查询</el-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tradingTips_href">
+                    <div class="hd hdd-bod">
+                        <img src="//static.cninfo.com.cn/new/assets/image/stop_resume_trading.png" alt="">
+                    </div>
+                    <div class="tradingTips_content">
+                        <a class="tradingTips_div" href="https://www.szse.cn/disclosure/memo/index.html" target="_blank">
+                            <img class="one" src="//static.cninfo.com.cn/new/assets/image/tfp_sjs.png" alt=""/>
+                            <span>深交所</span>
+                        </a>
+                        <a class="tradingTips_div" href="http://www.sse.com.cn/disclosure/dealinstruc/suspension/stock/"
+                           target="_blank">
+                            <img class="one" src="//static.cninfo.com.cn/new/assets/image/tfp_sejs.png" alt=""/>
+                            <span>上交所</span>
+                        </a>
+                        <a class="tradingTips_div" href="https://www.bse.cn/disclosure/tradingtips.html"
+                           target="_blank">
+                            <img class="one" src="//static.cninfo.com.cn/new/assets/image/tfp_bjs.png" alt=""/>
+                            <span>北交所</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="right_sec_list_wrap mt_20 interview">
+                    <div class="header font_fff">
+                        <!-- <span class="fb f24">云访谈</span> -->
+                        <img src="//static.cninfo.com.cn/new/assets/image/cloud_interview.png" alt="">
+                        <a href="https://irm.cninfo.com.cn/views/interview?tab=1" target="_blank" class="pointer ml_12 f14">
+                            更多<img src="//static.cninfo.com.cn/new/assets/image/inter_right.png" style="width:18px;height:19px;vertical-align: -4px;margin-left: 4px;" alt="">
+                        </a>
+                    </div>
+                    <div class="list hot-interview">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 互动问答 -->
+<div class="irm-view jc-shadow">
+    <div class="jc-layout clearfix">
+        <div class="jc-layout-lt">
+            <div class="jc-tab-second ov-hide hd-tab">
+                <ul class="tabs-list tabs-list-1">
+                    <li class="active">
+                        <a data-list="hd" href="javascript:;">
+                            互动问答
+                        </a>
+                    </li>
+                    <li>
+                        <a data-list="dy" href="javascript:;">
+                            调研信息
+                        </a>
+                    </li>
+                    <a target="_blank" class="more1" href="http://irm.cninfo.com.cn/ircs/index">
+                        更多
+                        <svg class="icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#icongengduozhengti"></use>
+                        </svg>
+                    </a>
+                </ul>
+                <div class="tabs-container">
+                    <div id="hdwd" class="tab-content">
+                    </div>
+                    <div id="dyxx" class="tab-content">
+                        <table class="table jc-table jc-table3">
+                            <colgroup>
+                                <col width="90">
+                                <col width="180">
+                                <col width="">
+                                <col width="150">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>简称</th>
+                                <th>公告标题</th>
+                                <th class="txt-rt">公告时间</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jc-layout-rt">
+            <div class="jc-mod right_sec_list_wrap mb_16 ComSevenDayCount" v-if="countList.length>0">
+                <div class="header">
+                    <img src="http://static.cninfo.com.cn/new/assets/image/special_event.png" alt="">
+                    <a href="https://irm.cninfo.com.cn/views/interview?tab=2" target="_blank">
+                        <span style="color: #606972; font-size: 14px;">更多</span><img src="//static.cninfo.com.cn/new/assets/image/inter_right.png" style="width:18px;height:19px;vertical-align: -4px;margin-left: 4px;" alt="">
+                    </a>
+                </div>
+                <div class="special_event_content">
+                    <div id="specialItem">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 交易概览 -->
+<div class="trade-view jc-shadow">
+    <div class="jc-layout clearfix">
+        <div class="jc-layout-lt ">
+            <div class="jc-tab ov-hide trade-tab">
+                <ul class="tabs-list tabs-list-1">
+                    <li class="active">
+                        <a data-list="public" href="javascript:;">
+                            公开信息
+                        </a>
+                    </li>
+                    <li>
+                        <a data-list="marginTrading" href="javascript:;">
+                            融资融券
+                        </a>
+                    </li>
+                    <li>
+                        <a data-list="intsDetail" href="javascript:;">
+                            大宗交易
+                        </a>
+                        <svg class="icon hot-badge-svg svg-icon" aria-hidden="true">
+                            <use xlink:href="#iconhot"></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <a data-list="liftBan" href="javascript:;">
+                            限售解禁
+                        </a>
+                    </li>
+                    <a target="_blank" class="more1" href="/new/commonUrl?url=data/dzjy">
+                        更多
+                        <svg class="icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#icongengduozhengti"></use>
+                        </svg>
+                    </a>
+                </ul>
+                <div class="tabs-container">
+                    <div class="tab-content">
+                        <div class="jc-tab-second ov-hide trade-condition-tab handle-tab ">
+                            <ul class="tabs-list tabs-list-2">
+                                <li class="active">
+                                    <a data-list="sze" href="javascript:;">
+                                        深市
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-list="sse" href="javascript:;">
+                                        沪市
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-list="bse" href="javascript:;">
+                                        北交所
+                                    </a>
+                                </li>
+                                <li>
+                                    <a data-list="" href="javascript:;">
+                                        深沪京
+                                    </a>
+                                </li>
+                            </ul>
+                            <span class="trade-day-1">交易日：--</span>
+                        </div>
+                        <table id="pubInfoTable" class="table jc-table jc-table3">
+                            <colgroup>
+                                <col width="170">
+                                <col width="170">
+                                <col width="">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>简称</th>
+                                <th>信息公开原因</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content">
+                        <div class="handle-tab">
+                            <span class="trade-day-2">交易日：--</span>
+                        </div>
+                        <table id="marginTradeTable" class="table jc-table jc-table3">
+                            <colgroup>
+                                <col width="90">
+                                <col width="140">
+                                <col width="125">
+                                <col width="135">
+                                <col width="120">
+                                <col width="140">
+                                <col width="120">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>简称</th>
+                                <th class="lht">本日融资余额 <br><span class="tips">（万元）</span></th>
+                                <th class="lht">本日融资买入额 <br><span class="tips">（万股）</span></th>
+                                <th class="lht">本日融券余量 <br><span class="tips">（万股）</span></th>
+                                <th class="lht">本日融券卖出量 <br><span class="tips">（万元）</span></th>
+                                <th class="lht">融资融券余额 <br><span class="tips">（万元）</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content">
+                        <div class="handle-tab">
+                            <span class="trade-day-3">交易日：--</span>
+                        </div>
+                        <table id="intsDetailTable" class="table jc-table jc-table3">
+                            <colgroup>
+                                <col width="90">
+                                <col width="120">
+                                <col width="100">
+                                <col width="100">
+                                <col width="100">
+                                <col width="185">
+                                <col width="185">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>简称</th>
+                                <th class="lht">成交价格 <br><span class="tips">（元）</span></th>
+                                <th class="lht">成交量 <br><span class="tips">（万股）</span></th>
+                                <th class="lht">成交金额 <br><span class="tips">（万元）</span></th>
+                                <th class="txt-c">买方营业部</th>
+                                <th class="txt-c">卖方营业部</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab-content">
+                        <div class="handle-tab">
+                            <span class="trade-day-4">解禁日：--</span>
+                        </div>
+                        <table id="liftBanTable" class="table jc-table jc-table3">
+                            <colgroup>
+                                <col width="90">
+                                <col width="150">
+                                <col width="110">
+                                <col width="175">
+                                <col width="180">
+                                <col width="175">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>代码</th>
+                                <th>简称</th>
+                                <th>公告日期</th>
+                                <th class="lht">实际解除限售数合计 <br><span class="tips">（万股）</span></th>
+                                <th class="lht">实际解除限售比例合计 <br><span class="tips">（%）</span></th>
+                                <th class="lht">实际可流通数量合计 <br><span class="tips">（万股）</span></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="jc-layout-rt">
+            <div class="jc-mod trade-tips">
+                <div class="jc-mod-hd" style="margin-bottom: 20px;">
+                    <span class="tit">
+                        <img width="75" height="15" src="//static.cninfo.com.cn/new/assets/image/market_calendar.png" alt=""/>
+                    </span>
+                    <span class="time " style="color: #606972;">
+                            (2026-09-04)
+                    </span>
+                    <a target="_blank" class="more1" href="/new/commonUrl?url=disclosure/tradingTips">
+                        更多
+                        <span class="more-svg">
+                            <svg class="icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#icongengduozhengti"></use>
+                        </svg>
+                        </span>
+                    </a>
+                </div>
+
+                            <div class="jc-mod-bd jc-mod-gp">
+                                    <div class="jc-mod-hd2">
+                                        新股发行日
+                                        <a target="_blank" class="more2" href="/new/commonUrl?url=disclosure/tradingTips">更多 ></a>
+                                    </div>
+                                        <div class="trade-entry">今日无新股发行</div>
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                                    <div class="jc-mod-hd2">
+                                        新发股份上市日
+                                        <a target="_blank" class="more2" href="/new/commonUrl?url=disclosure/tradingTips">更多 ></a>
+                                    </div>
+                                        <div class="trade-entry">今日无新股上市</div>
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                                    <div class="jc-mod-hd2">
+                                        股东会召开日
+                                        <a target="_blank" class="more2" href="/new/commonUrl?url=disclosure/tradingTips">更多 ></a>
+                                    </div>
+                                        <ul class="buy-list">
+                                                    <li style="font-size: 14px;">
+                                                        <a title="2026年9月4日召开1次临时股东会">
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000655">000655</a>
+                                                            </span>
+                                                                <span class="" title="金岭矿业">
+                                                                    <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000655">金岭矿业 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                                    <li style="font-size: 14px;">
+                                                        <a title="2026年9月4日召开3次临时股东会">
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000721">000721</a>
+                                                            </span>
+                                                                <span class="" title="西安饮食">
+                                                                    <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000721">西安饮食 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                        </ul>
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                                    <div class="jc-mod-hd2">
+                                        分红转增派息登记日
+                                        <a target="_blank" class="more2" href="/new/commonUrl?url=disclosure/tradingTips">更多 ></a>
+                                    </div>
+                                        <ul class="buy-list">
+                                                    <li style="font-size: 14px;">
+                                                        <a title="2026年6月30日利润分配10派0.06元(含税)，2026年9月4日股权登记，2026年9月7日除权，2026年9月7日派息">
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000681">000681</a>
+                                                            </span>
+                                                                <span class="" title="视觉中国">
+                                                                    <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000681">视觉中国 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                                    <li style="font-size: 14px;">
+                                                        <a title="2026年6月30日利润分配10派1.06元(含税)，2026年9月4日股权登记，2026年9月7日除权，2026年9月7日派息">
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000905">000905</a>
+                                                            </span>
+                                                                <span class="" title="厦门港务">
+                                                                    <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000905">厦门港务 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                        </ul>
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                                    <div class="jc-mod-hd2">
+                                        分红转增派息除权除息日
+                                        <a target="_blank" class="more2" href="/new/commonUrl?url=disclosure/tradingTips">更多 ></a>
+                                    </div>
+                                        <ul class="buy-list">
+                                                    <li style="font-size: 14px;">
+                                                        <a title="2026年6月30日利润分配10派10元(含税)，2026年9月3日股权登记，2026年9月4日除权，2026年9月4日派息">
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000408">000408</a>
+                                                            </span>
+                                                                <span class="" title="藏格矿业">
+                                                                    <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=000408">藏格矿业 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                                    <li style="font-size: 14px;">
+                                                        <a title="2026年6月30日利润分配10派3.5元(含税)，2026年9月3日股权登记，2026年9月4日除权，2026年9月4日派息">
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=001316">001316</a>
+                                                            </span>
+                                                                <span class="" title="润贝航科">
+                                                                    <a target="_blank" href="/new/disclosure/stock?f002v=001001&stockCode=001316">润贝航科 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                        </ul>
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                            </div>
+                            <div class="jc-mod-bd jc-mod-gp">
+                                    <div class="jc-mod-hd2">
+                                        最新调研
+                                        <a target="_blank" class="more2" href="/new/commonUrl?url=disclosure/list/notice#dy%2F1">更多 ></a>
+                                    </div>
+                                        <ul class="buy-list">
+                                                    <li style="font-size: 14px;">
+                                                        <a>
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?orgId=9900030081&stockCode=300684">300684</a>
+                                                            </span>
+                                                                <span class="" title="中石科技">
+                                                                    <a target="_blank" href="/new/disclosure/stock?orgId=9900030081&stockCode=300684">中石科技 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                                    <li style="font-size: 14px;">
+                                                        <a>
+                                                            <span>
+                                                                <a target="_blank" href="/new/disclosure/stock?orgId=9900047329&stockCode=301210">301210</a>
+                                                            </span>
+                                                                <span class="" title="金杨精密">
+                                                                    <a target="_blank" href="/new/disclosure/stock?orgId=9900047329&stockCode=301210">金杨精密 </a>
+                                                                </span>
+                                                        </a>
+                                                    </li>
+                                        </ul>
+                            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 网投专区 -->
+<div class="netvote-view jc-shadow">
+    <div class="jc-layout clearfix">
+        <div class="jc-layout-lt">
+            <div class="jc-tab-second ov-hide">
+                <ul class="tabs-list tabs-list-1">
+                    <li>
+                        <a data-list="vote">
+                            网络投票
+                        </a>
+                        <span class="wltp-tips fw-normal ">
+                            &nbsp;
+                        (互联网投票时间：
+                        <span class="time "> 开始日 9:15 - 结束日 15:00</span>)
+                        </span>
+                    </li>
+                    <a  target="_blank" class="more1" href="http://wltp.cninfo.com.cn/shareHolderMeetingList">
+                        更多
+                        <svg class="icon svg-icon" aria-hidden="true">
+                            <use xlink:href="#icongengduozhengti"></use>
+                        </svg>
+                    </a>
+                </ul>
+                <div class="tabs-container">
+                    <div class="tab-content">
+                        <table id="voteTable" class="table jc-table">
+                            <colgroup>
+                                <col width="295">
+                                <col width="240">
+                                <col width="">
+                                <col width="90">
+                            </colgroup>
+                            <thead>
+                            <tr>
+                                <th>会议名称</th>
+                                <th>互联网投票时间</th>
+                                <th>提案内容</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jc-layout-rt">
+            <div class="jc-mod vote-guide">
+                <div class="jc-mod-hd">
+                    <span class="tit">
+                    <svg class="icon svg-icon" aria-hidden="true">
+                    <use xlink:href="#iconwangtouzhiyin"></use>
+                    </svg>
+                    </span>
+                </div>
+                <div class="jc-mod-bd">
+                    <div class="jc-mod-hd2">
+                        <span class="jc-circle"></span>
+                        深市投票专区
+                    </div>
+                    <ul class="jc-list vote-area">
+                        <li>
+                            <a class="p-hover" target="_blank" href="http://wltp.cninfo.com.cn">
+                                <div class="ic">
+                                    <i class="iconfont icontouziyonghu"></i>
+                                </div>
+                                <span style="margin-left: 5px">投资者服务专区</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="p-hover" target="_blank" href="https://list.cninfo.com.cn">
+                                <div class="ic">
+                                    <i class="iconfont iconhuiyigongsi"></i>
+                                </div>
+                                <span style="margin-left: 9px">上市公司服务专区</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="jc-mod-hd2">
+                        <span class="jc-circle"></span>
+                        网投快捷入口
+                    </div>
+                    <ul class="jc-list vote-entry">
+                        <li>
+                            <a class="p-hover" target="_blank" href="http://wltp.cninfo.com.cn/regular">
+                                <i class="iconfont iconshenshiguize"></i>
+                                <div>深市规则</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="p-hover" target="_blank" href="http://vote.sseinfo.com/bizRules">
+                                <i class="iconfont iconhushiguize"></i>
+                                <div>沪市规则</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="p-hover" target="_blank" href="http://wltp.cninfo.com.cn/shareHolderMeetingList">
+                                <i class="iconfont iconshenshitoupiao"></i>
+                                <div>深市投票</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="p-hover" target="_blank" href="http://vote.sseinfo.com/home/meetingListByTime">
+                                <i class="iconfont iconhushitoupiao"></i>
+                                <div>沪市投票</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+                        <div>
+                            <img width="420" height="160" src="http://static.cninfo.com.cn/finalpage/2021-12-28/1212044246.PNG" data-src="//static.cninfo.com.cn/new/assets/image/ban2.png" alt=""/>
+                        </div>
+        </div>
+    </div>
+</div>
+    <div class="right-bar">
+        <ul>
+            <li class="item">
+                <a target="_blank" href="http://irm.cninfo.com.cn/interview/collect/questionCollect">
+                    <i style="top:18px;">
+                        提问
+                        <svg class="icon hot-badge svg-icon" aria-hidden="true">
+                            <use xlink:href="#iconhot"></use>
+                        </svg>
+                    </i>
+                    <div>预征集</div>
+                </a>
+            </li>
+            <li class="item barItem">
+                <a class="my-subs" href="javascript:;">
+                    <i style="top:-4px;right: -4px;">
+                        <svg class="icon svg-icon svg-cur-color icon-color" aria-hidden="true">
+                            <use xlink:href="#icon-bianzu25"></use>
+                        </svg>
+                    </i>
+                    <div>APP</div>
+                </a>
+                <div class="backAppHover">
+                    <img src="/new/assets/image/app_iconImg.png" style="width: 90px;height: 90px;"></img>
+                    <span class="spanImgs">扫码下载APP</span>
+                </div>
+            </li>
+            <li class="item">
+                <a href="/new/commonUrl/pageOfSearch?url=disclosure/list/search">
+                    <i class="iconfont icongonggao"></i>
+                    <div>公告</div>
+                </a>
+            </li>
+            <li class="item">
+                <a class="my-question-yz" href="https://irm.cninfo.com.cn/" target="_blank">
+                    <i class="iconfont icontiwen"></i>
+                    <div>互动</div>
+                </a>
+            </li>
+            <li v-cloak id="feedback" class="item">
+                <a @click="openDialog">
+                    <i class="iconfont iconfankui"></i>
+                    <div>反馈</div>
+                </a>
+                <el-dialog :append-to-body="true" top="25vh" title="反馈意见" :visible.sync="dialogVisible" width="45%">
+                    <div>
+                        <el-form>
+                            <el-form-item>
+                                <el-input type="textarea" maxlength="300" v-model="msg" placeholder="请输入您的意见建议..." :rows="7"></el-input>
+                            </el-form-item>
+                        </el-form>
+                    </div>
+                    <span slot="footer" class="dialog-footer">
+                        <el-button size="small" @click.stop.native="dialogVisible = false">取消</el-button>
+                        <el-button size="small" @click.stop.native="confirmDialog" type="primary">确认</el-button>
+                    </span>
+                </el-dialog>
+            </li>
+        </ul>
+        <div class="backtop item">
+            <a>
+                <i class="iconfont iconhuidingbu"></i>
+                <div>回顶部</div>
+            </a>
+        </div>
+    </div>
+    <div id="loginWrapper" class="login-wrapper">
+<!--        <div class="login-box" style="max-width:430px;margin:0 auto;top: 200px;">
+            <iframe id="login_iframe" style="width:100%;height: 560px;" frameborder="0"></iframe>
+            <div class="close-login-btn"><i class="iconfont iconshanchu"></i></div>
+        </div> -->
+    </div>
+    <footer>
+        <div class="jc-layout clearfix ft-inner">
+            <div class="company-info">
+                <p class="f-txt">关于我们</p>
+                <div>巨潮资讯网是深圳证券交易所信息披露官方网站，由深交所全资子公司深圳证券信息有限公司运营，平台始终致力于保护投资者的知情权和参与权，为投资者提供一站式的证券市场信息服务。</div>
+                <ul class="jc-list ft-logo">
+                    <li class="sep-line relative">
+                        <a target="_blank" href="http://www.szsi.cn/gywm/gsjs/gsjj/">
+                            <img width="228" height="38" src="/new/assets/image/c-logo.png" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a target="_blank" href="http://www.szsi.cn/cpfw/jczxw/">
+                            <img width="85" height="38" src="/new/assets/image/logo2.png" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="friend-links">
+                <p class="f-txt">友情链接</p>
+                <ul class="jc-list">
+                    <li>
+                        <a class="f-hover" target="_blank" href="http://www.szse.cn/">深圳证券交易所</a>
+                        <a class="f-hover" target="_blank" href="http://www.sse.com.cn/">上海证券交易所</a>
+                        <a class="f-hover" target="_blank" href="http://www.szsi.cn/">深圳证券信息有限公司</a>
+                    </li>
+                    <li>
+                        <a class="f-hover" target="_blank" href="http://www.cnindex.com.cn/">国证指数</a>
+                        <a class="f-hover" target="_blank" href="https://www.chinahtz.com/index.do">科融通</a>
+                        <a class="f-hover" target="_blank" href="https://www.v-next.cn/index.do">V-Next</a>
+                    </li>
+                    <li>
+                        <a class="f-hover" target="_blank" href="http://webapi.cninfo.com.cn/">深证信数据服务平台</a>
+                        <a class="f-hover" target="_blank" href="http://webapi.cninfo.com.cn/#/home-en">CNINFO Data Service</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contracks">
+                <p class="f-txt">关注我们</p>
+                <ul class="jc-list social-list">
+                    <li>
+                        <div>
+                            <img width="70" height="70" src="/new/assets/image/pic-wechat.png" alt="">
+                        </div>
+                        <span>公众号</span>
+                    </li>
+                    <li>
+                        <div>
+                            <img width="70" height="70" src="/new/assets/image/app_log.jpg" alt="">
+                        </div>
+                        <span>APP</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="ba">
+            <div class="jc-layout clearfix">
+                <a class="f-hover" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030002001497"> <img style="vertical-align: text-bottom" width="20" height="20" src="/new/assets/image/record.png" alt=""> 粤公网安备 44030002001497 号</a>
+                &nbsp;&nbsp;&nbsp;
+                深圳证券信息有限公司 版权所有 <a class="f-hover" href="https://beian.miit.gov.cn"> 粤B2-20050313号 </a> &nbsp;&nbsp;&nbsp;
+                <span id="statement" style="display: inline-block">
+                     <a class="pointer fff-color" @click="stateVisible = true"> 免责声明&nbsp;&nbsp;&nbsp;  </a>
+                     <el-dialog custom-class="state-pop" title="免责声明" :visible.sync="stateVisible">
+                        <div>
+                            <p>本网站竭力保证所提供的证券市场信息准确可靠，但并不担保（无论提示、默示、法定或其他形式）其准确性和完整性。任何使用方不得就全部或部分使用其中的证券市场信息作为依据对于由此而引起的任何损失向本公司提出索赔。</p>
+                            <p>本网站亦不保证所设置的外部链接的准确性和完整性。任何机构或者个人通过本网站与其他网站的链接而获得其他网站内容，其风险责任自负。本公司不对此承担任何法律责任。</p>
+                            <p>本声明在本网站首页及相关页面发布。本网站郑重提示：任何机构或者个人进入本网站，即被视为已完全知悉、理解并接受本声明的全部内容。</p>
+                        </div>
+                        <div slot="footer" class=" txt-c">
+                            <el-button type="primary" @click.stop.native="stateVisible = false">确认</el-button>
+                        </div>
+                    </el-dialog>
+                </span>
+
+            </div>
+            <div class="jc-layout">
+                建议使用IE11及以上浏览器，1280*800以上分辨率 本网站支持ipv6访问
+            </div>
+        </div>
+    </footer>
+<script defer="defer" src="//static.cninfo.com.cn/new/assets/js/vmd.js?v=20260710082532"></script>
+</body>
+</html>
