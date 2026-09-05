@@ -1,0 +1,141 @@
+财政部 国家税务总局关于专项用途财政性资金企业所得税处理问题的通知
+var documentId = "c466c018611d42a1ae91f65a9be88a3c" ;
+简体
+|
+繁体
+|
+无障碍浏览
+国家税务总局
+|
+广东省人民政府
+抖音
+手机端
+微博
+微信
+本站热词：
+个税
+增值税
+小微企业
+社保费
+发票
+首页
+信息公开
+新闻动态
+政策文件
+纳税服务
+互动交流
+$(function(){
+    $(".bf_button").click(function(){
+      $(".zt_select dl").html("<dd class=\"selected top_tools_color\"><a class=\"bai_hei\">页面原始配色</a></dd><dd><a class=\"lan_huang top_tools_color\">蓝底黄字白链接</a></dd><dd><a class=\"lan_hei top_tools_color\">黄底黑字蓝链接</a></dd><dd><a class=\"hei_huang top_tools_color\">黑底黄字白链接</a></dd><dd><a class=\"ys top_tools_color\">白底黑字蓝链接</a></dd>")
+  })
+    })
+当前位置：
+首页
+>
+政策文件
+>
+政策法规库
+>
+总局政策法规
+财政部 国家税务总局关于专项用途财政性资金企业所得税处理问题的通知
+财税〔2011〕70号
+发布机构:
+财政部 国家税务总局
+发文日期:
+2011-09-07
+有效级别:
+全文有效
+补充说明:
+浏览次数：
+各省、自治区、直辖市、计划单列市财政厅（局）、国家税务局、地方税务局，新疆生产建设兵团财务局：
+根据《中华人民共和国企业所得税法》及《中华人民共和国企业所得税法实施条例》（国务院令第512号，以下简称实施条例）的有关规定，经国务院批准，现就企业取得的专项用途财政性资金企业所得税处理问题通知如下：
+一、企业从县级以上各级人民政府财政部门及其他部门取得的应计入收入总额的财政性资金，凡同时符合以下条件的，可以作为不征税收入，在计算应纳税所得额时从收入总额中减除：
+（一）企业能够提供规定资金专项用途的资金拨付文件；
+（二）财政部门或其他拨付资金的政府部门对该资金有专门的资金管理办法或具体管理要求；
+（三）企业对该资金以及以该资金发生的支出单独进行核算。
+二、根据实施条例第二十八条的规定，上述不征税收入用于支出所形成的费用，不得在计算应纳税所得额时扣除；用于支出所形成的资产，其计算的折旧、摊销不得在计算应纳税所得额时扣除。
+三、企业将符合本通知第一条规定条件的财政性资金作不征税收入处理后，在5年（60个月）内未发生支出且未缴回财政部门或其他拨付资金的政府部门的部分，应计入取得该资金第六年的应税收入总额；计入应税收入总额的财政性资金发生的支出，允许在计算应纳税所得额时扣除。
+四、本通知自2011年1月1日起执行。
+财政部 国家税务总局
+2011年9月7日
+附件：
+政策解读：
+相关政策文件：
+扫一扫在手机打开当前页
+回到
+顶部
+网站声明
+|
+网站地图
+|
+网站管理
+|
+联系我们
+|
+网站建议
+主办单位：国家税务总局广东省税务局
+地址：广东省广州市天河区花城大道767号
+网站标识码：bm29190001
+粤ICP备 19143301号
+粤公网安备 44010602004213号
+var _trackDataType = 'web';var _trackData = _trackData || [];
+var _hmt = _hmt || [];
+(function() {
+var local = window.location.href;
+//console.log(local)
+if(local.indexOf("www.gd-n-tax.gov.cn")!=-1){
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?652de4b0bcd4062462b2339062119309";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+}else if(local.indexOf("guangdong.chinatax.gov.cn")!=-1){
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?a83fd5cd47f51f4a9b53ddc2b0b56cde";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+}
+})();
+展
+开
+边
+栏
+政务
+服务网
+执法
+公示
+电子
+税务局
+广东省电子税务局
+微信
+关注·微信
+微博
+关注·微博
+政声
+传递
+网站
+建议
+//var websiteId = "b055abfdb74f48a099fa7cd23d639888";
+$(document).ready(function(){
+	try{
+		cms_hits_site(websiteId,"3","");//站点
+	}catch(e){}
+})
+$(function(){
+$(".header").css("display","block");
+$(".crumb").css("display","block");
+$(".bottom").css("display","block");
+  $(function(){
+  	if($("#_span_jiucuo img").length<1){
+    	$("#_span_jiucuo").html("<a href='https://zfwzgl.www.gov.cn/exposure/jiucuo.html?site_code=bm29190001&url=http%3A%2F%2Fguangdong.chinatax.gov.cn%2Fgdsw%2Fzcwj%2Fzcwj.shtml' target='_blank'><img src='/gdsw/xhtml/images/public/jiucuo.png'></a>")
+    }
+  })
+})
+LA.init({id:"3HvnPQkRwQwdeSqn",ck:"3HvnPQkRwQwdeSqn"})
+if(typeof cityCode !== "undefined"){
+ if(cityCode == 'gzsw' || window.location.href.indexOf('gdswzz/gz')!=-1 || window.location.href.indexOf('gzgkml/gz')!=-1){
+  LA.init({id:"3L2WdSmGMK2Vec4a",ck:"3L2WdSmGMK2Vec4a"})
+ }
+ if(cityCode == 'fssw' || window.location.href.indexOf('gdswzz/fs')!=-1 || window.location.href.indexOf('fsgkml/fs')!=-1){
+  LA.init({id:"3L2WxePSHEj5JUj4",ck:"3L2WxePSHEj5JUj4"})
+ }
+}

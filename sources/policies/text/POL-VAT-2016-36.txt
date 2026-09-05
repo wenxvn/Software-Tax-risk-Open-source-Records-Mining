@@ -1,0 +1,305 @@
+国家税务总局政策法规库
+.container{
+            min-height: 70px;
+        }
+        body {
+    background: #fff !important;
+}
+.header{
+    height: auto;
+    background: #fff;
+}
+.header .inhead,.mainnav .container{padding: 0;}
+.header-search .hotwords span{
+    float: left;
+    line-height: 1.875em;
+}
+.header-toolbar .pulldown{border: 0;padding: 0 0 0 0;}
+.header-login{
+position: absolute;
+top: 120px;
+right: 5px;
+width: 17%;
+max-width: 600px;
+overflow: hidden;
+display: none;
+}  
+  @media (max-width:1024px) {
+    .header-login{
+    	top: 105px;
+        right: 5px;
+        width: 23%;
+    }
+    @media (max-width:768px) {
+    .header-login{
+    	top: 140px;
+        width: 30%;
+    }
+      
+      @media (max-width:768px) {
+    .header-login{
+    	top: 140px;
+        width: 30%;
+    }
+     @media (max-width:767px) {
+    .header-login{
+    	top: 90px;
+        width: 65%;
+    }
+        @media (max-width:320px) {
+    .header-login{
+    	top: 80px;
+        width: 75%;
+    }
+简
+繁
+登录
+EN
+本站热词：
+发票
+小微企业
+个人所得税
+发票查询
+社保
+***
+个人中心
+退出
+首页
+总局概况
+信息公开
+新闻发布
+政策法规
+纳税服务
+互动交流
+专题专栏
+全部
+文件
+解读
+搜索
+高级搜索
+搜索方式：
+精准
+模糊
+热门关键词：
+// 简繁体切换
+    $('#zh_click_s').on('click',function(){
+      $(this).parents('.pulldown').hide();
+      $('#zh_click_t').parents('.pulldown').show();
+    })
+    $('#zh_click_t').on('click',function(){
+      $(this).parents('.pulldown').hide();
+      $('#zh_click_s').parents('.pulldown').show();
+    })
+当前位置：
+首页
+>
+政策法规
+>
+财税文件
+财政部 国家税务总局关于全面推开营业税改征增值税试点的通知
+财税〔2016〕36号
+（
+）
+字体：
+【大】
+【中】
+【小】
+分享到：
+收藏
+订阅
+已推送，请在
+“个人中心-我的订阅”
+中查看
+此稿件无标签，进入
+“订阅设置”
+中订阅更多
+成文日期：2016-03-23
+收藏
+分享
+订阅
+语音播报：
+扫一扫在手机打开当前页
+$('#share-1').share();
+注释
+各省、自治区、直辖市、计划单列市财政厅（局）、国家税务局、地方税务局，新疆生产建设兵团财务局：
+经国务院批准，自2016年5月1日起，在全国范围内全面推开营业税改征增值税（以下称营改增）试点，建筑业、房地产业、金融业、生活服务业等全部营业税纳税人，纳入试点范围，由缴纳营业税改为缴纳增值税。现将《营业税改征增值税试点实施办法》、《营业税改征增值税试点有关事项的规定》、《营业税改征增值税试点过渡政策的规定》和《跨境应税行为适用增值税零税率和免税政策的规定》印发你们，请遵照执行。
+本通知附件规定的内容，除另有规定执行时间外，自2016年5月1日起执行。
+《财政部 国家税务总局关于将铁路运输和邮政业纳入营业税改征增值税试点的通知》
+（财税〔2013〕106号）、
+《财政部 国家税务总局关于铁路运输和邮政业营业税改征增值税试点有关政策的补充通知》
+（财税〔2013〕121号）、
+《财政部 国家税务总局关于将电信业纳入营业税改征增值税试点的通知》
+（财税〔2014〕43号）、
+《财政部 国家税务总局关于国际水路运输增值税零税率政策的补充通知》
+（财税〔2014〕50号）和
+《财政部 国家税务总局关于影视等出口服务适用增值税零税率政策的通知》
+（财税〔2015〕118号），除另有规定的条款外，相应废止。
+各地要高度重视营改增试点工作，切实加强试点工作的组织领导，周密安排，明确责任，采取各种有效措施，做好试点前的各项准备以及试点过程中的监测分析和宣传解释等工作，确保改革的平稳、有序、顺利进行。遇到问题请及时向财政部和国家税务总局反映。
+附件： 1.
+营业税改征增值税试点实施办法.doc
+2.
+营业税改征增值税试点有关事项的规定.doc
+3.
+营业税改征增值税试点过渡政策的规定.doc
+4.
+跨境应税行为适用增值税零税率和免税政策的规定.doc
+财政部 国家税务总局
+2016年3月23日
+【打印】
+【下载】
+纠错或建议
+关联解读
+关联文件
+关联问答
+用户登录
+忘记密码
+登　录
+没有账号？
+立即注册账号
+网站纠错
+增值税
+文件
+中国政府网
+国家税务总局各省级税务局
+
+北京
+天津
+河北
+山西
+内蒙古
+辽宁
+吉林
+黑龙江
+上海
+江苏
+浙江
+安徽
+福建
+江西
+山东
+河南
+湖北
+湖南
+广东
+广西
+海南
+重庆
+四川
+贵州
+云南
+西藏
+陕西
+甘肃
+青海
+宁夏
+新疆
+大连
+宁波
+厦门
+青岛
+深圳
+直属单位
+
+国家税务总局税务干部学院
+中国税务杂志社
+中国税务报社
+中国税务出版社
+税务相关
+
+中国税务学会
+中国国际税收研究会
+中国注册税务师协会
+"一带一路"税收征管合作机制
+友情链接
+
+国家发展和改革委员会
+财政部
+商务部
+人民银行
+审计署
+海关总署
+国家市场监督管理总局
+国家医疗保障局
+访问统计
+|
+网站管理
+|
+联系我们
+|
+网站地图
+|
+主办单位：国家税务总局
+版权所有：国家税务总局
+地址：北京市海淀区羊坊店西路5号
+电脑版
+移动端
+网站标识码：bm29000002
+京ICP备13021685号-2
+京公网安备 11040102700073号
+var _trackDataType = 'web';var _trackData = _trackData || [];
+//$(document).on('ready', function() {
+       //  20230426 切换至电脑端
+       $('.transToPc').on('click', function() {
+         var tempRadios = $(window).width() / 1400;
+         $('meta[name=viewport]').attr('content', 'width=1400px, user-scalable=no, initial-scale=' + tempRadios);
+         $('.transToPc').hide();
+         $('.transToMobile').show();
+       })
+       $('.transToMobile').on('click', function() {
+         $('meta[name=viewport]').attr('content',
+           'width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0');
+         $('.transToPc').show();
+         $('.transToMobile').hide();
+       })
+   //  })
+       
+       
+         //返回顶部
+    $(".gotop").click(function (e) {
+      e.preventDefault();
+      scrollToTop(500);
+    });
+    function scrollToTop(time) {
+      var time = time || 0;
+      $("html,body").animate({ scrollTop: 0 }, time);
+    }
+     var a = window.pageYOffset
+      var c = Number($(".header").height());
+      a > c ? $("#goTop").show() : $("#goTop").hide();
+    // 当网页向下滑动200px 侧边栏出现"返回顶部" 按钮
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        $("#goTop").show();
+      } else {
+        $("#goTop").hide();
+      }
+    }
+//lay弹出
+    function openDialog(url, atitle, width, height) {
+        layer.open({    
+            
+            type: 2,
+            title: atitle,
+            closeBtn: 1,
+            area: [width, height],
+            content: url,
+            cancel: function(){
+                //reloadImage();
+            }
+        });
+    }
+    
+    
+    function closeDialog(){
+      $(".dialog").hide();
+      $(".info").remove();
+      $("body.dialog-parent-hidden").removeClass("dialog-parent-hidden");
+      stepActive = 0;
+      setStepState(stepActive);
+    
+      reset("loginForm");
+      //reset("regform");
+      //reset("step1Form");
+      //reset("step2Form");
+    }
