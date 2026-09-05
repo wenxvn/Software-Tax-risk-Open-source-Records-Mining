@@ -22,6 +22,23 @@ def html_to_text(html: str) -> str:
 
 POLICY_CANDIDATES = (
     {
+        "policy_id": "POL-VAT-SOFTWARE-2011-100",
+        "title": "财政部 国家税务总局关于软件产品增值税政策的通知",
+        "document_number": "财税〔2011〕100号",
+        "issuer": "财政部 国家税务总局",
+        "publish_date": "2011-10-13",
+        "effective_date": "2011-01-01",
+        "expiry_date": "",
+        "amendment_status": "OFFICIAL_SOURCE_CURRENT_STATUS_NOT_SEPARATELY_VERIFIED",
+        "article": "第一、三、四、六至八条",
+        "applicable_taxpayer": "销售自行开发生产的软件产品且满足资料、核算与管理条件的增值税一般纳税人（资格待核）",
+        "applicable_business": "自行开发生产软件产品的销售；与其他货物或应税劳务并存时的进项税额分摊",
+        "source_url": "https://fgk.chinatax.gov.cn/zcfgk/c102416/c5204304/content.html",
+        "case_period_applicable": "",
+        "notes": "已核验国家税务总局政策法规库原文及成文、生效日期；公开年报中的相关披露不能证明软件产品资格、备案、销售额拆分、进项税额分摊或实际退税额，均须以企业资料核验。",
+        "status": "NEEDS_REVIEW",
+    },
+    {
         "policy_id": "POL-VAT-2016-36",
         "title": "财政部 国家税务总局关于全面推开营业税改征增值税试点的通知",
         "document_number": "财税〔2016〕36号",

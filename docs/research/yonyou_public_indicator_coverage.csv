@@ -1,0 +1,13 @@
+indicator_id,indicator_name,candidate_tax_type,inputs,public_data_available,status,policy_ids,policy_state,evidence_required,conclusion_ceiling
+PUB-IND-01,销售回款/营业收入,增值税候选,cash_received_from_sales;operating_revenue,True,OBSERVATION_READY,POL-VAT-2016-36,POLICY_NEEDS_REVIEW,增值税申报表、销项发票、合同、回款明细,OBSERVATION
+PUB-IND-02,应收账款/营业收入,增值税候选,accounts_receivable;operating_revenue,True,OBSERVATION_READY,POL-VAT-2016-36,POLICY_NEEDS_REVIEW,客户合同、销项发票、收款及期后回款明细,OBSERVATION
+PUB-IND-03,合同资产/营业收入,增值税候选,contract_assets;operating_revenue,True,OBSERVATION_READY,POL-VAT-2016-36,POLICY_NEEDS_REVIEW,履约进度、验收资料、发票和增值税申报表,OBSERVATION
+PUB-IND-04,合同负债/营业收入,增值税候选,contract_liabilities;operating_revenue,True,OBSERVATION_READY,POL-VAT-2016-36,POLICY_NEEDS_REVIEW,预收款、合同履约、发票和增值税申报表,OBSERVATION
+PUB-IND-05,研发费用/营业收入,企业所得税候选,research_and_development_expense;operating_revenue,True,OBSERVATION_READY,POL-CIT-RD-2023-07;POL-CIT-RD-2023-11,POLICY_VERIFIED,研发项目书、辅助账、人员工时、企业所得税申报表及A107012,OBSERVATION
+PUB-IND-06,计入损益政府补助/营业收入,企业所得税候选,government_grants_recognized_in_profit;operating_revenue,True,OBSERVATION_READY,POL-CIT-GOV-2011-70,POLICY_VERIFIED,拨付文件、专项管理要求、单独核算资料及企业所得税申报表,OBSERVATION
+PUB-IND-07,税金及附加/营业收入,多税种观察,taxes_and_surcharges;operating_revenue,True,OBSERVATION_READY,,POLICY_UNVERIFIED,各税种明细账、纳税申报表、税费计算底稿,OBSERVATION
+PUB-IND-08,支付各项税费/营业收入,多税种观察,taxes_paid;operating_revenue,True,OBSERVATION_READY,,POLICY_UNVERIFIED,税款缴款书、纳税申报表、税费明细账,OBSERVATION
+PUB-IND-09,应交税费/营业收入,多税种观察,taxes_payable;operating_revenue,True,OBSERVATION_READY,,POLICY_UNVERIFIED,应交税费明细账、纳税申报表、缴款书,OBSERVATION
+PUB-IND-10,营业成本/营业收入,企业所得税候选,operating_cost;operating_revenue,True,OBSERVATION_READY,,POLICY_UNVERIFIED,成本明细账、合同、发票、付款及企业所得税申报表,OBSERVATION
+PUB-IND-11,应税合同与印花税凭证覆盖,印花税候选,,False,TODO_MISSING_DATA,POL-STAMP-2022-14,POLICY_VERIFIED,应税合同台账、印花税税源明细表、申报表和缴款书,NO_CONCLUSION
+PUB-IND-12,关联交易税务资料覆盖,企业所得税候选,,False,TODO_MISSING_DATA,,POLICY_UNVERIFIED,关联交易明细、定价资料、合同、发票、资金流水及企业所得税申报表,NO_CONCLUSION

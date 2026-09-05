@@ -6,4 +6,4 @@ GATE_E,NOT_STARTED,,,,
 GATE_F,NOT_STARTED,,,,
 GATE_G,NOT_STARTED,,,,
 GATE_H,NOT_STARTED,,,,
-GATE_A,IN_PROGRESS,2026-09-05T08:12:02+00:00,docs/research/yonyou_annual_report_verification.csv,,两期发行人年度报告已完成哈希和文本完整性核验；仍缺企业内部资料与参赛资格确认
+GATE_A,IN_PROGRESS,2026-09-05T08:26:44+00:00,docs/research/yonyou_annual_report_verification.csv;docs/research/yonyou_public_indicator_coverage.csv,,用户确认公开资料路线可参赛；已生成候选指标观察。合同、发票、申报、辅助账等关键证据仍缺失，禁止确认风险。

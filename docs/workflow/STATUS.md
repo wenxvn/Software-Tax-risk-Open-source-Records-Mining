@@ -5,8 +5,8 @@
 ## 当前状态
 
 - 当前阶段：PHASE 1（开源资料与候选案例筛选）
-- 当前任务：归档官方政策候选并核验其在案例期间的适用边界
-- 当前门禁：GATE A `IN_PROGRESS`；两期发行人年报的文件可追溯性已完成，仍缺企业内部资料与参赛资格确认，不得确认真实风险
+- 当前任务：基于已核验公开资料生成匿名化参赛提交文本（Word/PDF）
+- 当前门禁：GATE A `IN_PROGRESS`；两期发行人年报的文件可追溯性已完成，仍缺企业内部资料，不得确认真实风险
 
 ## 如何查看
 
@@ -22,3 +22,7 @@ uv run python scripts/workflow.py gate GATE_A IN_PROGRESS --evidence "sources/cu
 ```
 
 `TASK_LOG.csv` 为每次脚本运行的汇总记录，`EVENTS.jsonl` 为追加式事件记录；失败运行也必须保留。
+
+## 提交文档生成
+
+提交版由 `scripts/build_submission_document.py` 使用 `python-docx` 生成 Word 原生段落和可编辑表格，再使用 LibreOffice 从同一份 Word 导出 PDF。核心金额、比例和变动均从代码生成的 `outputs/tables/` 读取；不得在 Word 或 PDF 中手改数值。

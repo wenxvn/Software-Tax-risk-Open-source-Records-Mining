@@ -65,3 +65,77 @@
 {"event": "FINISH", "run_id": "run-20260905T081846Z-0636a1b7", "at": "2026-09-05T08:19:02+00:00", "status": "PASSED", "message": ""}
 {"event": "START", "run_id": "run-20260905T081902Z-dbe05629", "at": "2026-09-05T08:19:02+00:00", "phase": "PHASE 1", "task": "build_curated_manifest"}
 {"event": "FINISH", "run_id": "run-20260905T081902Z-dbe05629", "at": "2026-09-05T08:19:02+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082644Z-0a996239", "at": "2026-09-05T08:26:44+00:00", "phase": "PHASE 1", "task": "extract_public_financial_fields"}
+{"event": "NOTE", "run_id": "run-20260905T082644Z-0a996239", "at": "2026-09-05T08:26:44+00:00", "message": "PUB-YY-2023-AR: extracted 12 public numeric fields"}
+{"event": "NOTE", "run_id": "run-20260905T082644Z-0a996239", "at": "2026-09-05T08:26:44+00:00", "message": "PUB-YY-2024-AR: extracted 12 public numeric fields"}
+{"event": "FINISH", "run_id": "run-20260905T082644Z-0a996239", "at": "2026-09-05T08:26:44+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082644Z-2042cdf4", "at": "2026-09-05T08:26:44+00:00", "phase": "PHASE 1", "task": "screen_public_indicators"}
+{"event": "NOTE", "run_id": "run-20260905T082644Z-2042cdf4", "at": "2026-09-05T08:26:44+00:00", "message": "generated 20 descriptive observations"}
+{"event": "NOTE", "run_id": "run-20260905T082644Z-2042cdf4", "at": "2026-09-05T08:26:44+00:00", "message": "2 candidate indicators lack public inputs"}
+{"event": "FINISH", "run_id": "run-20260905T082644Z-2042cdf4", "at": "2026-09-05T08:26:44+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082736Z-ae4fd497", "at": "2026-09-05T08:27:36+00:00", "phase": "PHASE 1", "task": "verify_public_disclosures"}
+{"event": "NOTE", "run_id": "run-20260905T082736Z-ae4fd497", "at": "2026-09-05T08:27:40+00:00", "message": "PUB-YY-2023-AR: VERIFIED"}
+{"event": "NOTE", "run_id": "run-20260905T082736Z-ae4fd497", "at": "2026-09-05T08:27:47+00:00", "message": "PUB-YY-2024-AR: VERIFIED"}
+{"event": "FINISH", "run_id": "run-20260905T082736Z-ae4fd497", "at": "2026-09-05T08:27:47+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082748Z-0d7c4498", "at": "2026-09-05T08:27:48+00:00", "phase": "PHASE 1", "task": "extract_public_financial_fields"}
+{"event": "NOTE", "run_id": "run-20260905T082748Z-0d7c4498", "at": "2026-09-05T08:27:48+00:00", "message": "PUB-YY-2023-AR: extracted 12 public numeric fields"}
+{"event": "NOTE", "run_id": "run-20260905T082748Z-0d7c4498", "at": "2026-09-05T08:27:48+00:00", "message": "PUB-YY-2024-AR: extracted 12 public numeric fields"}
+{"event": "FINISH", "run_id": "run-20260905T082748Z-0d7c4498", "at": "2026-09-05T08:27:48+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082748Z-868fabd0", "at": "2026-09-05T08:27:48+00:00", "phase": "PHASE 1", "task": "screen_public_indicators"}
+{"event": "NOTE", "run_id": "run-20260905T082748Z-868fabd0", "at": "2026-09-05T08:27:48+00:00", "message": "generated 20 descriptive observations"}
+{"event": "NOTE", "run_id": "run-20260905T082748Z-868fabd0", "at": "2026-09-05T08:27:48+00:00", "message": "2 candidate indicators lack public inputs"}
+{"event": "FINISH", "run_id": "run-20260905T082748Z-868fabd0", "at": "2026-09-05T08:27:48+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082748Z-23f4ceb4", "at": "2026-09-05T08:27:48+00:00", "phase": "PHASE 5", "task": "audit_policies"}
+{"event": "FINISH", "run_id": "run-20260905T082748Z-23f4ceb4", "at": "2026-09-05T08:27:48+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082934Z-a67a08d2", "at": "2026-09-05T08:29:34+00:00", "phase": "PHASE 1", "task": "extract_public_financial_fields"}
+{"event": "NOTE", "run_id": "run-20260905T082934Z-a67a08d2", "at": "2026-09-05T08:29:34+00:00", "message": "PUB-YY-2023-AR: extracted 12 public numeric fields"}
+{"event": "NOTE", "run_id": "run-20260905T082934Z-a67a08d2", "at": "2026-09-05T08:29:34+00:00", "message": "PUB-YY-2024-AR: extracted 12 public numeric fields"}
+{"event": "FINISH", "run_id": "run-20260905T082934Z-a67a08d2", "at": "2026-09-05T08:29:34+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T082934Z-9a084385", "at": "2026-09-05T08:29:34+00:00", "phase": "PHASE 1", "task": "screen_public_indicators"}
+{"event": "NOTE", "run_id": "run-20260905T082934Z-9a084385", "at": "2026-09-05T08:29:35+00:00", "message": "generated 20 descriptive observations"}
+{"event": "NOTE", "run_id": "run-20260905T082934Z-9a084385", "at": "2026-09-05T08:29:35+00:00", "message": "2 candidate indicators lack public inputs"}
+{"event": "FINISH", "run_id": "run-20260905T082934Z-9a084385", "at": "2026-09-05T08:29:35+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:36:39+00:00", "phase": "PHASE 1", "task": "collect_policy_candidates"}
+{"event": "NOTE", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:36:43+00:00", "message": "POL-VAT-SOFTWARE-2011-100: NEEDS_REVIEW"}
+{"event": "NOTE", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:36:47+00:00", "message": "POL-VAT-2016-36: NEEDS_REVIEW"}
+{"event": "NOTE", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:36:50+00:00", "message": "POL-CIT-RD-2023-07: VERIFIED"}
+{"event": "NOTE", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:36:54+00:00", "message": "POL-CIT-RD-2023-11: VERIFIED"}
+{"event": "NOTE", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:36:57+00:00", "message": "POL-CIT-GOV-2011-70: VERIFIED"}
+{"event": "NOTE", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:37:00+00:00", "message": "POL-STAMP-2022-14: VERIFIED"}
+{"event": "FINISH", "run_id": "run-20260905T083639Z-95dcee1d", "at": "2026-09-05T08:37:00+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T083700Z-64c33d84", "at": "2026-09-05T08:37:00+00:00", "phase": "PHASE 1", "task": "extract_public_financial_fields"}
+{"event": "NOTE", "run_id": "run-20260905T083700Z-64c33d84", "at": "2026-09-05T08:37:00+00:00", "message": "PUB-YY-2023-AR: extracted 12 public numeric fields"}
+{"event": "NOTE", "run_id": "run-20260905T083700Z-64c33d84", "at": "2026-09-05T08:37:00+00:00", "message": "PUB-YY-2024-AR: extracted 12 public numeric fields"}
+{"event": "FINISH", "run_id": "run-20260905T083700Z-64c33d84", "at": "2026-09-05T08:37:00+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T083700Z-ba2485d3", "at": "2026-09-05T08:37:00+00:00", "phase": "PHASE 1", "task": "screen_public_indicators"}
+{"event": "NOTE", "run_id": "run-20260905T083700Z-ba2485d3", "at": "2026-09-05T08:37:00+00:00", "message": "generated 20 descriptive observations"}
+{"event": "NOTE", "run_id": "run-20260905T083700Z-ba2485d3", "at": "2026-09-05T08:37:00+00:00", "message": "2 candidate indicators lack public inputs"}
+{"event": "FINISH", "run_id": "run-20260905T083700Z-ba2485d3", "at": "2026-09-05T08:37:00+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T084041Z-77705700", "at": "2026-09-05T08:40:41+00:00", "phase": "PHASE 1", "task": "build_submission_document"}
+{"event": "NOTE", "run_id": "run-20260905T084041Z-77705700", "at": "2026-09-05T08:40:41+00:00", "message": "DOCX rendered from verified public-disclosure outputs"}
+{"event": "NOTE", "run_id": "run-20260905T084041Z-77705700", "at": "2026-09-05T08:40:42+00:00", "message": "PDF rendered from DOCX by LibreOffice"}
+{"event": "FINISH", "run_id": "run-20260905T084041Z-77705700", "at": "2026-09-05T08:40:42+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T084237Z-a06c02ea", "at": "2026-09-05T08:42:37+00:00", "phase": "PHASE 1", "task": "build_submission_document"}
+{"event": "NOTE", "run_id": "run-20260905T084237Z-a06c02ea", "at": "2026-09-05T08:42:37+00:00", "message": "DOCX rendered from verified public-disclosure outputs"}
+{"event": "NOTE", "run_id": "run-20260905T084237Z-a06c02ea", "at": "2026-09-05T08:42:38+00:00", "message": "PDF rendered from DOCX by LibreOffice"}
+{"event": "FINISH", "run_id": "run-20260905T084237Z-a06c02ea", "at": "2026-09-05T08:42:38+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T084406Z-6c058193", "at": "2026-09-05T08:44:06+00:00", "phase": "PHASE 1", "task": "build_submission_document"}
+{"event": "NOTE", "run_id": "run-20260905T084406Z-6c058193", "at": "2026-09-05T08:44:06+00:00", "message": "DOCX rendered from verified public-disclosure outputs"}
+{"event": "NOTE", "run_id": "run-20260905T084406Z-6c058193", "at": "2026-09-05T08:44:07+00:00", "message": "PDF rendered from DOCX by LibreOffice"}
+{"event": "FINISH", "run_id": "run-20260905T084406Z-6c058193", "at": "2026-09-05T08:44:07+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T084423Z-6faf3542", "at": "2026-09-05T08:44:23+00:00", "phase": "PHASE 1", "task": "build_submission_document"}
+{"event": "NOTE", "run_id": "run-20260905T084423Z-6faf3542", "at": "2026-09-05T08:44:23+00:00", "message": "DOCX rendered from verified public-disclosure outputs"}
+{"event": "NOTE", "run_id": "run-20260905T084423Z-6faf3542", "at": "2026-09-05T08:44:23+00:00", "message": "PDF rendered from DOCX by LibreOffice"}
+{"event": "FINISH", "run_id": "run-20260905T084423Z-6faf3542", "at": "2026-09-05T08:44:23+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T084512Z-9a375d34", "at": "2026-09-05T08:45:12+00:00", "phase": "PHASE 1", "task": "build_submission_document"}
+{"event": "NOTE", "run_id": "run-20260905T084512Z-9a375d34", "at": "2026-09-05T08:45:12+00:00", "message": "DOCX rendered from verified public-disclosure outputs"}
+{"event": "NOTE", "run_id": "run-20260905T084512Z-9a375d34", "at": "2026-09-05T08:45:13+00:00", "message": "PDF rendered from DOCX by LibreOffice"}
+{"event": "FINISH", "run_id": "run-20260905T084512Z-9a375d34", "at": "2026-09-05T08:45:13+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T085950Z-0dec2fb9", "at": "2026-09-05T08:59:50+00:00", "phase": "PHASE 1", "task": "build_submission_document"}
+{"event": "NOTE", "run_id": "run-20260905T085950Z-0dec2fb9", "at": "2026-09-05T08:59:50+00:00", "message": "DOCX rendered from verified public-disclosure outputs"}
+{"event": "NOTE", "run_id": "run-20260905T085950Z-0dec2fb9", "at": "2026-09-05T08:59:51+00:00", "message": "PDF rendered from DOCX by LibreOffice"}
+{"event": "FINISH", "run_id": "run-20260905T085950Z-0dec2fb9", "at": "2026-09-05T08:59:51+00:00", "status": "PASSED", "message": ""}
+{"event": "START", "run_id": "run-20260905T090109Z-e060d89f", "at": "2026-09-05T09:01:09+00:00", "phase": "PHASE 1", "task": "build_submission_document"}
+{"event": "NOTE", "run_id": "run-20260905T090109Z-e060d89f", "at": "2026-09-05T09:01:09+00:00", "message": "DOCX rendered from verified public-disclosure outputs"}
+{"event": "NOTE", "run_id": "run-20260905T090109Z-e060d89f", "at": "2026-09-05T09:01:09+00:00", "message": "PDF rendered from DOCX by LibreOffice"}
+{"event": "FINISH", "run_id": "run-20260905T090109Z-e060d89f", "at": "2026-09-05T09:01:09+00:00", "status": "PASSED", "message": ""}

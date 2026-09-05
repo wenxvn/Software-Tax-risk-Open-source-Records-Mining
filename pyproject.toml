@@ -16,6 +16,7 @@ dependencies = [
   "pandera>=0.20,<1",
   "pymupdf>=1.24,<2",
   "pypdf>=4,<7",
+  "python-docx>=1.1,<2",
   "networkx>=3.2,<4",
   "jinja2>=3.1,<4",
   "pyyaml>=6,<7",
